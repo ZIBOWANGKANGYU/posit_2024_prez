@@ -13,6 +13,16 @@ format:
     footer: <https://zibowangkangyu.github.io/>
 ---
 
+```{r}
+#| label: load-packages
+#| include: false
+
+library(fs)
+library(flair)
+library(magrittr)
+library(dplyr)
+```
+
 ## Is this a Shiny app?
 
 PUT IN app_1: will host on shinyapps.io
@@ -23,7 +33,7 @@ PUT IN external app: will host on shinyapps.io
 
 ## GitHub Copilot
 
-ADD basic information about copilot and its productivity boost
+ADD basic information about copilot (how it is different from chattr) and its productivity boost
 
 ## Shiny is a pain if ...
 
@@ -92,32 +102,145 @@ ui <- fluidPage(
 )
 ```
 
-## Setting the context
+## Set the context
 
 First example: UI re-production
 
+- Context as code
 
+```{r}
+dir_tree("../ui_reproduction")
+```
 
-## Safety and fairness 
+## Set the context
 
-First example: UI re-production
+- Current active tab
 
-## Writing prmopts 
+- Opened tabs
+
+- Index project files
+
+## Set the context
+
+``` {.html code-line-numbers="|8|9"}
+
+<!doctype html>
+<html lang="en" class="no-js">
+...
+</html>
+
+<!-- 
+# Above is the index.html file. The file is a template for a website's homepage.
+# Re-create the homepage, but with R Shiny.
+-->
+```
+
+## Know your project 
+
+- Personal information 
+
+- Bias concerns
+
+- If not sure, ask Copilot!
+
+```{.r code-line-numbers="1,4"}
+# Please don't provide code but give answer in English. 
+# Above is the HTML code for a website's homepage. Does it contain any personal or sensitive information?
+
+# Answer
+
+```
+
+## Refer to specific knowledge
+
+- chattr package use these simple references
+
+```{.r}
+    "Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference",
+    "Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference",
+    "Use tidyverse packages: readr, ggplot2, dplyr, tidyr",
+    "For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom",
+    "Avoid explanations unless requested by user, expecting code only"
+```
+
+```{.r}
+# Refer here: https://shiny.posit.co/r/articles/build/html-tags/
+# for more information on how to convert HTML to Shiny.
+```
+
+## Writing prompts 
+
+- What is a prompt? (difference between a prompt and context) for users of genAI.
+
+## Writing prompts
 
 - Single
 
+```{.r} 
+
+# Create UI for a beautiful desk booking application using an interactive calendar. The UI should allow users to select a date and time to book a desk. It should show a calendar with information about all booked desks. 
+
+```
+
+## Writing prmopts {auto-animate="true"}
+
+- Single
+Break down big task into smaller steps
+
+```{.r code-line-numbers="2|3|4"}
+
+# Create simple sidebar UI using bslib package. 
+# Change the UI above. Put date and desk selection dropdown menus in the sidebar.
+# Put a calendar in the main panel.
+# ...
+```
+
+## Writing prompts 
+
 - Specific 
+Know the package / function you want to use
+If not sure, ask Copilot
+
+```{.r code-line-numbers="1"}
+# Please don't provide code but give answer in English. 
+# What packages in R provide advanced functionality for creating interactive calendars?
+
+# Anwer: shinyWidgets, shinyCal, shinyCalender, shinyCalenderPlus
+
+```
+
+## Writing prompts
 
 - Short
 
-Second example: UI improvement 
+```{.r code-line-numbers=""}
+# I really want users to be able to create new events in the calendar. 
+# The user should be able to click or drag on dates, and then a pop-up window should appear to let users put in event details. 
+# Once events have been created, they should appear on the calendar. 
+# The suggestions I have got so far do not allow users to create new events. In other words, they are not interactive. 
+# I need a package that creates INTERACTIVE calendars. 
+# Which package in R should I use?
+```
+
+- Find other help
+
+## Writing prompts 
+
+- Specific 
+
+```{.r code-line-numbers="1"}
+# Create a calendar input using the toastui package in the main panel
+```
 
 ## Iteration 
 
 Third example: UI testing
 
+
 ## Knowledge base 
 
+- External resouces
+- Internal processes 
 
 ## Pretty Code {auto-animate="true"}
 
