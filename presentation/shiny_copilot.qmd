@@ -137,6 +137,8 @@ dir_tree("../ui_reproduction")
 
 ## Know your project 
 
+"No completions available"???
+
 - Personal information 
 
 - Bias concerns
@@ -234,13 +236,179 @@ If not sure, ask Copilot
 
 ## Iteration 
 
-Third example: UI testing
+Third example: Shiny testing
 
+- Unit tests
+- Server tests
+- Browser tests
+
+
+## Iteration 
+
+- Documentation first 
+
+```{.r}
+create_stock_table <- function(data) {
+  stock_data_wide <- data %>% spread(symbol, close) %>%
+    mutate(date = as.character(date))
+  stock_data_wide
+}
+
+# Create documentation for the function create_stock_table above:
+```
+
+## Iteration 
+
+- Documentation first 
+
+```{.r}
+#' Create a stock table
+#' 
+#' This function creates a stock table from a data frame.
+#' 
+#' @param data A data frame with stock data
+#' @return A data frame with stock data in wide format
+#' 
+create_stock_table <- function(data) {
+  stock_data_wide <- data %>% spread(symbol, close) %>%
+    mutate(date = as.character(date))
+  stock_data_wide
+}
+
+# Now, write unit tests for the function create_stock_table. 
+# Use the testthat package and write the tests. 
+# Refererence here: https://testthat.r-lib.org/
+```
+
+## Iteration
+
+- Start with the first few words that you think Copilot should generate
+
+```{.r}
+# ...
+# Now, write unit tests for the function create_stock_table. 
+# Use the testthat package and write the tests. 
+# Refererence here: https://testthat.r-lib.org/
+
+# Test 1: 
+```
+
+## Iteration
+
+- Start with the first few words that you think Copilot should generate
+
+```{.r}
+# ...
+# Now, write unit tests for the function create_stock_table. 
+# Use the testthat package and write the tests. 
+# Refererence here: https://testthat.r-lib.org/
+
+# Test 1: 
+```
+
+## Iteration
+
+- Start with the first few words that you think Copilot should generate
+
+```{.r}
+# ...
+# Now, write unit tests for the function create_stock_table. 
+# Use the testthat package and write the tests. 
+# Refererence here: https://testthat.r-lib.org/
+
+# Test 1: Test if the function returns a data frame
+test_that("create_stock_table returns a data frame", {
+  data <- data.frame(date = c("2020-01-01", "2020-01-02"),
+                     symbol = c("AAPL", "AAPL"),
+                     close = c(100, 101))
+  expect_is(create_stock_table(data), "data.frame")
+})
+```
+
+## Iteration
+
+- Start with examples
+
+```{.r}
+# Create server tests for the `server` function. 
+# Refer to the explanations here regarding how to create server tests: https://mastering-shiny.org/scaling-testing.html#testing-reactivity
+
+# For example, below is code for server:
+# server <- function(input, output, session) {
+#   xy <- reactive(input$x - input$y)
+#   yz <- reactive(input$z + input$y)
+#   xyz <- reactive(xy() * yz())
+#   output$out <- renderText(paste0("Result: ", xyz()))
+# }
+# 
+# We can write tests for the reactivity of the server function. 
+# 
+# test_that("reactives and output updates", {
+#   testServer(server, {
+#     session$setInputs(x = 1, y = 1, z = 1)
+#     expect_equal(xy(), 0)
+#     expect_equal(yz(), 2)
+#     expect_equal(output$out, "Result: 0")
+#   })
+# })
+
+# Now, create server tests for the server function below
+```
+
+## Iteration
+
+- Let Copilot know what you want to test 
+
+```{.r}
+# Test that the reactive expression stock_table_rv() returns the correct value
+```
+
+## Iteration
+
+- Modifying dynamic data to work in browser tests
+
+```{.r}
+"<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> date </th> <th style='text-align: right;'> AAPL </th> <th style='text-align: right;'> GOOGL </th>  </tr> </thead> <tbody>\n  <tr> <td> 19844.00 </td> <td align=\"right\"> 169.30 </td> <td align=\"right\"> 163.86 </td> </tr>\n  <tr> <td> 19845.00 </td> <td align=\"right\"> 173.03 </td> <td align=\"right\"> 166.62 </td> </tr>\n  <tr> <td> 19846.00 </td> <td align=\"right\"> 183.38 </td> <td align=\"right\"> 167.24 </td> </tr>\n  <tr> <td> 19849.00 </td> <td align=\"right\"> 181.71 </td> <td align=\"right\"> 168.10 </td> </tr>\n  <tr> <td> 19850.00 </td> <td align=\"right\"> 182.40 </td> <td align=\"right\"> 171.25 </td> </tr>\n  <tr> <td> 19851.00 </td> <td align=\"right\"> 182.74 </td> <td align=\"right\"> 169.38 </td> </tr>\n  <tr> <td> 19852.00 </td> <td align=\"right\"> 184.57 </td> <td align=\"right\"> 169.96 </td> </tr>\n  <tr> <td> 19853.00 </td> <td align=\"right\"> 183.05 </td> <td align=\"right\"> 168.65 </td> </tr>\n  <tr> <td> 19856.00 </td> <td align=\"right\"> 186.28 </td> <td align=\"right\"> 169.14 </td> </tr>\n  <tr> <td> 19857.00 </td> <td align=\"right\"> 187.43 </td> <td align=\"right\"> 170.34 </td> </tr>\n  <tr> <td> 19858.00 </td> <td align=\"right\"> 189.72 </td> <td align=\"right\"> 172.51 </td> </tr>\n  <tr> <td> 19859.00 </td> <td align=\"right\"> 189.84 </td> <td align=\"right\"> 174.18 </td> </tr>\n  <tr> <td> 19860.00 </td> <td align=\"right\"> 189.87 </td> <td align=\"right\"> 176.06 </td> </tr>\n  <tr> <td> 19863.00 </td> <td align=\"right\"> 191.04 </td> <td align=\"right\"> 176.92 </td> </tr>\n  <tr> <td> 19864.00 </td> <td align=\"right\"> 192.35 </td> <td align=\"right\"> 177.85 </td> </tr>\n  <tr> <td> 19865.00 </td> <td align=\"right\"> 190.90 </td> <td align=\"right\"> 176.38 </td> </tr>\n  <tr> <td> 19866.00 </td> <td align=\"right\"> 186.88 </td> <td align=\"right\"> 173.55 </td> </tr>\n  <tr> <td> 19867.00 </td> <td align=\"right\"> 189.98 </td> <td align=\"right\"> 174.99 </td> </tr>\n  <tr> <td> 19871.00 </td> <td align=\"right\"> 189.99 </td> <td align=\"right\"> 176.40 </td> </tr>\n  <tr> <td> 19872.00 </td> <td align=\"right\"> 190.29 </td> <td align=\"right\"> 175.90 </td> </tr>\n  <tr> <td> 19873.00 </td> <td align=\"right\"> 191.29 </td> <td align=\"right\"> 172.11 </td> </tr>\n  <tr> <td> 19874.00 </td> <td align=\"right\"> 192.25 </td> <td align=\"right\"> 172.50 </td> </tr>\n  <tr> <td> 19877.00 </td> <td align=\"right\"> 194.03 </td> <td align=\"right\"> 173.17 </td> </tr>\n  <tr> <td> 19878.00 </td> <td align=\"right\"> 194.35 </td> <td align=\"right\"> 173.79 </td> </tr>\n  <tr> <td> 19879.00 </td> <td align=\"right\"> 195.87 </td> <td align=\"right\"> 175.41 </td> </tr>\n  <tr> <td> 19880.00 </td> <td align=\"right\"> 194.48 </td> <td align=\"right\"> 176.73 </td> </tr>\n  <tr> <td> 19881.00 </td> <td align=\"right\"> 196.89 </td> <td align=\"right\"> 174.46 </td> </tr>\n  <tr> <td> 19884.00 </td> <td align=\"right\"> 193.12 </td> <td align=\"right\"> 175.01 </td> </tr>\n  <tr> <td> 19885.00 </td> <td align=\"right\"> 207.15 </td> <td align=\"right\"> 176.62 </td> </tr>\n  <tr> <td> 19886.00 </td> <td align=\"right\"> 213.07 </td> <td align=\"right\"> 177.79 </td> </tr>\n  <tr> <td> 19887.00 </td> <td align=\"right\"> 214.24 </td> <td align=\"right\"> 175.16 </td> </tr>\n  <tr> <td> 19888.00 </td> <td align=\"right\"> 212.49 </td> <td align=\"right\"> 176.79 </td> </tr>\n  <tr> <td> 19891.00 </td> <td align=\"right\"> 216.67 </td> <td align=\"right\"> 177.24 </td> </tr>\n  <tr> <td> 19892.00 </td> <td align=\"right\"> 214.29 </td> <td align=\"right\"> 175.09 </td> </tr>\n  <tr> <td> 19894.00 </td> <td align=\"right\"> 209.68 </td> <td align=\"right\"> 176.30 </td> </tr>\n  <tr> <td> 19895.00 </td> <td align=\"right\"> 207.49 </td> <td align=\"right\"> 179.63 </td> </tr>\n  <tr> <td> 19898.00 </td> <td align=\"right\"> 208.14 </td> <td align=\"right\"> 179.22 </td> </tr>\n  <tr> <td> 19899.00 </td> <td align=\"right\"> 209.07 </td> <td align=\"right\"> 184.03 </td> </tr>\n  <tr> <td> 19900.00 </td> <td align=\"right\"> 213.25 </td> <td align=\"right\"> 183.88 </td> </tr>\n  <tr> <td> 19901.00 </td> <td align=\"right\"> 214.10 </td> <td align=\"right\"> 185.41 </td> </tr>\n  <tr> <td> 19902.00 </td> <td align=\"right\"> 210.62 </td> <td align=\"right\"> 182.15 </td> </tr>\n  <tr> <td> 19905.00 </td> <td align=\"right\"> 216.75 </td> <td align=\"right\"> 182.99 </td> </tr>\n  <tr> <td> 19906.00 </td> <td align=\"right\"> 220.27 </td> <td align=\"right\"> 185.24 </td> </tr>\n  <tr> <td> 19907.00 </td> <td align=\"right\"> 221.55 </td> <td align=\"right\"> 185.82 </td> </tr>\n  <tr> <td> 19909.00 </td> <td align=\"right\"> 226.34 </td> <td align=\"right\"> 190.60 </td> </tr>\n  <tr> <td> 19912.00 </td> <td align=\"right\"> 227.82 </td> <td align=\"right\"> 189.03 </td> </tr>\n  <tr> <td> 19913.00 </td> <td align=\"right\"> 228.68 </td> <td align=\"right\"> 188.98 </td> </tr>\n  <tr> <td> 19914.00 </td> <td align=\"right\"> 232.98 </td> <td align=\"right\"> 191.18 </td> </tr>\n  <tr> <td> 19915.00 </td> <td align=\"right\"> 227.57 </td> <td align=\"right\"> 185.57 </td> </tr>\n  <tr> <td> 19916.00 </td> <td align=\"right\"> 230.54 </td> <td align=\"right\"> 185.07 </td> </tr>\n   </tbody> </table>"
+# Above is the expected HTML for the stock_table table. 
+# However, the actual data and date of stock prices will change. 
+# We need to create a function to transform the HTML into a format that can be compared.
+# The function below will remove the date and close price values from the HTML.
+# This will allow us to compare the HTML without worrying about the actual values.
+
+transform_html <- function(html) {
+ # Remove the date values
+ html <- gsub("<td> [0-9]+\\.[0-9]+ </td>", "<td> DATE </td>", html)
+ # Remove the close price values
+ html <- gsub("<td align=\"right\"> [0-9]+\\.[0-9]+ </td>", "<td align=\"right\"> CLOSE </td>", html)
+ return(html)
+}
+ 
+  transformed_html <- transform_html(stock_table)
+  
+ })
+
+```
 
 ## Knowledge base 
 
-- External resouces
-- Internal processes 
+- External resources
+
+- Namespacing for dynamic UI
+
+```{.r}
+# In R Shiny, when UI elements are generated through server code, they are not automatically namespaced. Therefore, we should always add namespace prefixes to the UI elements to avoid conflicts. 
+
+# Refer to the following documentation for more information: https://mastering-shiny.org/scaling-modules.html#dynamic-ui
+
+
+```
+
+## Knowledge base 
+
+- Internal processes: 
+- Security and compliance conventions
+- Code and documentation standards
+- Deployment process and environment
 
 ## Pretty Code {auto-animate="true"}
 
