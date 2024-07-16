@@ -1,6 +1,5 @@
 ---
-title: "GitHub Copilot in R Shiny Development"
-subtitle: "Create beautiful interactive slide decks with Reveal.js"
+title: "Use GitHub Copilot for R Shiny Development"
 format:
   revealjs: 
     code-line-numbers: true
@@ -10,7 +9,8 @@ format:
     preview-links: auto
     logo: images/quarto.png
     css: styles.css
-    footer: <https://zibowangkangyu.github.io/>
+    footer: Mark Wang for posit::conf(2024)
+    
 ---
 
 ```{r}
@@ -23,36 +23,54 @@ library(magrittr)
 library(dplyr)
 ```
 
-## Is this a Shiny app?
+## Is this a Shiny app? {auto-animate="true"}
 
-PUT IN app_1: will host on shinyapps.io
+[**A Shiny App**](https://posit.cloud/content/8438880)
 
-## Is this a Shiny app???
+## Is this a Shiny app??? {auto-animate="true"}
 
-PUT IN external app: will host on shinyapps.io
+[**A Shiny App**](https://posit.cloud/content/8438880)
 
-## GitHub Copilot
+[**Another Shiny App**](https://posit.cloud/content/8438826)
 
-ADD basic information about copilot (how it is different from chattr) and its productivity boost
+## GitHub Copilot {auto-animate="true"}
 
-## Shiny is a pain if ...
+-   7-22%
+-   1.5T \$
+-   75%
 
-- UI / front-end tasks
-- Routine / tedious tasks
+::: footer
+["The Productivity Effects of Generative AI: Evidence from a Field Experiment with GitHub Copilot"](https://mit-genai.pubpub.org/pub/v5iixksv/release/2)
+
+["Sea Change in Software Development: Economic and Productivity Analysis of the AI-Powered Developer Lifecycle”](https://github.blog/2023-06-27-the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/)
+
+["Developers get by with a little help from AI: Stack Overflow Knows code assistant pulse survey results."](https://stackoverflow.blog/2024/05/29/developers-get-by-with-a-little-help-from-ai-stack-overflow-knows-code-assistant-pulse-survey-results/)
+:::
+
+## Shiny is a pain because ... {auto-animate="true"}
+
+If you are a data professional using R, try **GitHub Copilot with Shiny first!**
+
+## Shiny is a pain because ... {auto-animate="true"}
+
+If you are a data professional using R, try **GitHub Copilot with Shiny first!**
+
+-   UI / front-end tasks
+-   Routine / tedious tasks
+
+::: footer
+["The State of Developer Ecosystem 2023"](https://www.jetbrains.com/lp/devecosystem-2023/r/)
+:::
 
 ## Interacting with Copilot
 
-Zeroth / simple example: focus on using Copilot with rstudio
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="40%"}
-Prerequisites 
+Prerequisites
 
-- A GitHub account
+-   A GitHub account
 
-- A Copilot subscription
-
+-   A Copilot subscription
 :::
 
 ::: {.column width="20%"}
@@ -61,25 +79,124 @@ Prerequisites
 ::: {.column width="40%"}
 Supported platforms
 
-- RStudio IDE
+-   RStudio IDE
 
-- Positron? use `chattr` package
-
+-   Positron? use `chattr` package
+:::
 :::
 
-::::
+## Get Started
 
-## 
+{{< video https://www.youtube.com/embed/s4cvpv4G1L0 title="Get Started with GitHub Copilot?" width="1250" height="580">}}
 
-Video: enabling Copilot in RStudio IDE
+## The basic workflow {auto-animate="true"}
 
-## First try with Copilot {auto-animate="true"}
+![](images/fundamental_workflow.svg){width="41"}
+
+## Prompt and response {auto-animate="true"}
+
+![](images/fundamental_workflow_1.svg){width="41"}
+
+## Writing prompts {auto-animate="true"}
+
+Tell Copilot what you want to do.
+
+
+
+::: columns
+::: {.column width="40%"}
+Effective prompts
+
+-   Single 
+
+-   Short 
+
+-   Specific 
+:::
+
+::: {.column width="20%"}
+:::
+
+::: {.column width="40%"}
+Type of prompts
+
+- Command
+
+- Question
+
+- Lead-in
+:::
+:::
+
+::: footer
+["Single, Short, Specific - Prompting GitHub Copilot for Visual Studio"](https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226)
+:::
+
+## Writing prompts {auto-animate="true"}
+
+-   Single
 
 ``` {.r}
+# Create a beautiful stock price tracking application using a 
+# table and a chart. The UI should allow users to select one or 
+# multiple stocks. It should show a table with information about
+# all selected stocks, and a line chart showing price changes over 
+# time.
+```
+
+## Writing prmopts {auto-animate="true"}
+
+-   Single
+
+``` {.r code-line-numbers="2|3|4"}
+
+# Create simple sidebar UI using bslib package. 
+# Change the UI above. Put date and desk selection dropdown menus in the sidebar.
+# Put a calendar in the main panel.
+# ...
+```
+
+## Writing prompts
+
+-   Specific Know the package / function you want to use If not sure, ask Copilot
+
+``` {.r code-line-numbers="1"}
+# Please don't provide code but give answer in English. 
+# What packages in R provide advanced functionality for creating interactive calendars?
+
+# Anwer: shinyWidgets, shinyCal, shinyCalender, shinyCalenderPlus
+```
+
+## Writing prompts
+
+-   Short
+
+``` {.r code-line-numbers=""}
+# I really want users to be able to create new events in the calendar. 
+# The user should be able to click or drag on dates, and then a pop-up window should appear to let users put in event details. 
+# Once events have been created, they should appear on the calendar. 
+# The suggestions I have got so far do not allow users to create new events. In other words, they are not interactive. 
+# I need a package that creates INTERACTIVE calendars. 
+# Which package in R should I use?
+```
+
+-   Find other help
+
+## Writing prompts
+
+-   Specific
+
+``` {.r code-line-numbers="1"}
+# Create a calendar input using the toastui package in the main panel
+```
+
+## Prompt and response
+
+``` r
 # Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. 
 ```
 
-## First try with Copilot {auto-animate="true"}
+## The prompt-response workflow {auto-animate="true"}
 
 ``` {.r code-line-numbers="1|3-18"}
 # Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. 
@@ -106,7 +223,7 @@ ui <- fluidPage(
 
 First example: UI re-production
 
-- Context as code
+-   Context as code
 
 ```{r}
 dir_tree("../ui_reproduction")
@@ -114,11 +231,11 @@ dir_tree("../ui_reproduction")
 
 ## Set the context
 
-- Current active tab
+-   Current active tab
 
-- Opened tabs
+-   Opened tabs
 
-- Index project files
+-   Index project files
 
 ## Set the context
 
@@ -135,29 +252,28 @@ dir_tree("../ui_reproduction")
 -->
 ```
 
-## Know your project 
+## Know your project
 
 "No completions available"???
 
-- Personal information 
+-   Personal information
 
-- Bias concerns
+-   Bias concerns
 
-- If not sure, ask Copilot!
+-   If not sure, ask Copilot!
 
-```{.r code-line-numbers="1,4"}
+``` {.r code-line-numbers="1,4"}
 # Please don't provide code but give answer in English. 
 # Above is the HTML code for a website's homepage. Does it contain any personal or sensitive information?
 
 # Answer
-
 ```
 
 ## Refer to specific knowledge
 
-- chattr package use these simple references
+-   chattr package use these simple references
 
-```{.r}
+``` r
     "Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference",
     "Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference",
     "Use tidyverse packages: readr, ggplot2, dplyr, tidyr",
@@ -165,89 +281,24 @@ dir_tree("../ui_reproduction")
     "Avoid explanations unless requested by user, expecting code only"
 ```
 
-```{.r}
+``` r
 # Refer here: https://shiny.posit.co/r/articles/build/html-tags/
 # for more information on how to convert HTML to Shiny.
 ```
 
-## Writing prompts 
-
-- What is a prompt? (difference between a prompt and context) for users of genAI.
-
-## Writing prompts
-
-- Single
-
-```{.r} 
-
-# Create UI for a beautiful desk booking application using an interactive calendar. The UI should allow users to select a date and time to book a desk. It should show a calendar with information about all booked desks. 
-
-```
-
-## Writing prmopts {auto-animate="true"}
-
-- Single
-Break down big task into smaller steps
-
-```{.r code-line-numbers="2|3|4"}
-
-# Create simple sidebar UI using bslib package. 
-# Change the UI above. Put date and desk selection dropdown menus in the sidebar.
-# Put a calendar in the main panel.
-# ...
-```
-
-## Writing prompts 
-
-- Specific 
-Know the package / function you want to use
-If not sure, ask Copilot
-
-```{.r code-line-numbers="1"}
-# Please don't provide code but give answer in English. 
-# What packages in R provide advanced functionality for creating interactive calendars?
-
-# Anwer: shinyWidgets, shinyCal, shinyCalender, shinyCalenderPlus
-
-```
-
-## Writing prompts
-
-- Short
-
-```{.r code-line-numbers=""}
-# I really want users to be able to create new events in the calendar. 
-# The user should be able to click or drag on dates, and then a pop-up window should appear to let users put in event details. 
-# Once events have been created, they should appear on the calendar. 
-# The suggestions I have got so far do not allow users to create new events. In other words, they are not interactive. 
-# I need a package that creates INTERACTIVE calendars. 
-# Which package in R should I use?
-```
-
-- Find other help
-
-## Writing prompts 
-
-- Specific 
-
-```{.r code-line-numbers="1"}
-# Create a calendar input using the toastui package in the main panel
-```
-
-## Iteration 
+## Iteration
 
 Third example: Shiny testing
 
-- Unit tests
-- Server tests
-- Browser tests
+-   Unit tests
+-   Server tests
+-   Browser tests
 
+## Iteration
 
-## Iteration 
+-   Documentation first
 
-- Documentation first 
-
-```{.r}
+``` r
 create_stock_table <- function(data) {
   stock_data_wide <- data %>% spread(symbol, close) %>%
     mutate(date = as.character(date))
@@ -257,11 +308,11 @@ create_stock_table <- function(data) {
 # Create documentation for the function create_stock_table above:
 ```
 
-## Iteration 
+## Iteration
 
-- Documentation first 
+-   Documentation first
 
-```{.r}
+``` r
 #' Create a stock table
 #' 
 #' This function creates a stock table from a data frame.
@@ -282,9 +333,9 @@ create_stock_table <- function(data) {
 
 ## Iteration
 
-- Start with the first few words that you think Copilot should generate
+-   Start with the first few words that you think Copilot should generate
 
-```{.r}
+``` r
 # ...
 # Now, write unit tests for the function create_stock_table. 
 # Use the testthat package and write the tests. 
@@ -295,9 +346,9 @@ create_stock_table <- function(data) {
 
 ## Iteration
 
-- Start with the first few words that you think Copilot should generate
+-   Start with the first few words that you think Copilot should generate
 
-```{.r}
+``` r
 # ...
 # Now, write unit tests for the function create_stock_table. 
 # Use the testthat package and write the tests. 
@@ -308,9 +359,9 @@ create_stock_table <- function(data) {
 
 ## Iteration
 
-- Start with the first few words that you think Copilot should generate
+-   Start with the first few words that you think Copilot should generate
 
-```{.r}
+``` r
 # ...
 # Now, write unit tests for the function create_stock_table. 
 # Use the testthat package and write the tests. 
@@ -327,9 +378,9 @@ test_that("create_stock_table returns a data frame", {
 
 ## Iteration
 
-- Start with examples
+-   Start with examples
 
-```{.r}
+``` r
 # Create server tests for the `server` function. 
 # Refer to the explanations here regarding how to create server tests: https://mastering-shiny.org/scaling-testing.html#testing-reactivity
 
@@ -357,17 +408,17 @@ test_that("create_stock_table returns a data frame", {
 
 ## Iteration
 
-- Let Copilot know what you want to test 
+-   Let Copilot know what you want to test
 
-```{.r}
+``` r
 # Test that the reactive expression stock_table_rv() returns the correct value
 ```
 
 ## Iteration
 
-- Modifying dynamic data to work in browser tests
+-   Modifying dynamic data to work in browser tests
 
-```{.r}
+``` r
 "<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>\n<thead> <tr> <th style='text-align: left;'> date </th> <th style='text-align: right;'> AAPL </th> <th style='text-align: right;'> GOOGL </th>  </tr> </thead> <tbody>\n  <tr> <td> 19844.00 </td> <td align=\"right\"> 169.30 </td> <td align=\"right\"> 163.86 </td> </tr>\n  <tr> <td> 19845.00 </td> <td align=\"right\"> 173.03 </td> <td align=\"right\"> 166.62 </td> </tr>\n  <tr> <td> 19846.00 </td> <td align=\"right\"> 183.38 </td> <td align=\"right\"> 167.24 </td> </tr>\n  <tr> <td> 19849.00 </td> <td align=\"right\"> 181.71 </td> <td align=\"right\"> 168.10 </td> </tr>\n  <tr> <td> 19850.00 </td> <td align=\"right\"> 182.40 </td> <td align=\"right\"> 171.25 </td> </tr>\n  <tr> <td> 19851.00 </td> <td align=\"right\"> 182.74 </td> <td align=\"right\"> 169.38 </td> </tr>\n  <tr> <td> 19852.00 </td> <td align=\"right\"> 184.57 </td> <td align=\"right\"> 169.96 </td> </tr>\n  <tr> <td> 19853.00 </td> <td align=\"right\"> 183.05 </td> <td align=\"right\"> 168.65 </td> </tr>\n  <tr> <td> 19856.00 </td> <td align=\"right\"> 186.28 </td> <td align=\"right\"> 169.14 </td> </tr>\n  <tr> <td> 19857.00 </td> <td align=\"right\"> 187.43 </td> <td align=\"right\"> 170.34 </td> </tr>\n  <tr> <td> 19858.00 </td> <td align=\"right\"> 189.72 </td> <td align=\"right\"> 172.51 </td> </tr>\n  <tr> <td> 19859.00 </td> <td align=\"right\"> 189.84 </td> <td align=\"right\"> 174.18 </td> </tr>\n  <tr> <td> 19860.00 </td> <td align=\"right\"> 189.87 </td> <td align=\"right\"> 176.06 </td> </tr>\n  <tr> <td> 19863.00 </td> <td align=\"right\"> 191.04 </td> <td align=\"right\"> 176.92 </td> </tr>\n  <tr> <td> 19864.00 </td> <td align=\"right\"> 192.35 </td> <td align=\"right\"> 177.85 </td> </tr>\n  <tr> <td> 19865.00 </td> <td align=\"right\"> 190.90 </td> <td align=\"right\"> 176.38 </td> </tr>\n  <tr> <td> 19866.00 </td> <td align=\"right\"> 186.88 </td> <td align=\"right\"> 173.55 </td> </tr>\n  <tr> <td> 19867.00 </td> <td align=\"right\"> 189.98 </td> <td align=\"right\"> 174.99 </td> </tr>\n  <tr> <td> 19871.00 </td> <td align=\"right\"> 189.99 </td> <td align=\"right\"> 176.40 </td> </tr>\n  <tr> <td> 19872.00 </td> <td align=\"right\"> 190.29 </td> <td align=\"right\"> 175.90 </td> </tr>\n  <tr> <td> 19873.00 </td> <td align=\"right\"> 191.29 </td> <td align=\"right\"> 172.11 </td> </tr>\n  <tr> <td> 19874.00 </td> <td align=\"right\"> 192.25 </td> <td align=\"right\"> 172.50 </td> </tr>\n  <tr> <td> 19877.00 </td> <td align=\"right\"> 194.03 </td> <td align=\"right\"> 173.17 </td> </tr>\n  <tr> <td> 19878.00 </td> <td align=\"right\"> 194.35 </td> <td align=\"right\"> 173.79 </td> </tr>\n  <tr> <td> 19879.00 </td> <td align=\"right\"> 195.87 </td> <td align=\"right\"> 175.41 </td> </tr>\n  <tr> <td> 19880.00 </td> <td align=\"right\"> 194.48 </td> <td align=\"right\"> 176.73 </td> </tr>\n  <tr> <td> 19881.00 </td> <td align=\"right\"> 196.89 </td> <td align=\"right\"> 174.46 </td> </tr>\n  <tr> <td> 19884.00 </td> <td align=\"right\"> 193.12 </td> <td align=\"right\"> 175.01 </td> </tr>\n  <tr> <td> 19885.00 </td> <td align=\"right\"> 207.15 </td> <td align=\"right\"> 176.62 </td> </tr>\n  <tr> <td> 19886.00 </td> <td align=\"right\"> 213.07 </td> <td align=\"right\"> 177.79 </td> </tr>\n  <tr> <td> 19887.00 </td> <td align=\"right\"> 214.24 </td> <td align=\"right\"> 175.16 </td> </tr>\n  <tr> <td> 19888.00 </td> <td align=\"right\"> 212.49 </td> <td align=\"right\"> 176.79 </td> </tr>\n  <tr> <td> 19891.00 </td> <td align=\"right\"> 216.67 </td> <td align=\"right\"> 177.24 </td> </tr>\n  <tr> <td> 19892.00 </td> <td align=\"right\"> 214.29 </td> <td align=\"right\"> 175.09 </td> </tr>\n  <tr> <td> 19894.00 </td> <td align=\"right\"> 209.68 </td> <td align=\"right\"> 176.30 </td> </tr>\n  <tr> <td> 19895.00 </td> <td align=\"right\"> 207.49 </td> <td align=\"right\"> 179.63 </td> </tr>\n  <tr> <td> 19898.00 </td> <td align=\"right\"> 208.14 </td> <td align=\"right\"> 179.22 </td> </tr>\n  <tr> <td> 19899.00 </td> <td align=\"right\"> 209.07 </td> <td align=\"right\"> 184.03 </td> </tr>\n  <tr> <td> 19900.00 </td> <td align=\"right\"> 213.25 </td> <td align=\"right\"> 183.88 </td> </tr>\n  <tr> <td> 19901.00 </td> <td align=\"right\"> 214.10 </td> <td align=\"right\"> 185.41 </td> </tr>\n  <tr> <td> 19902.00 </td> <td align=\"right\"> 210.62 </td> <td align=\"right\"> 182.15 </td> </tr>\n  <tr> <td> 19905.00 </td> <td align=\"right\"> 216.75 </td> <td align=\"right\"> 182.99 </td> </tr>\n  <tr> <td> 19906.00 </td> <td align=\"right\"> 220.27 </td> <td align=\"right\"> 185.24 </td> </tr>\n  <tr> <td> 19907.00 </td> <td align=\"right\"> 221.55 </td> <td align=\"right\"> 185.82 </td> </tr>\n  <tr> <td> 19909.00 </td> <td align=\"right\"> 226.34 </td> <td align=\"right\"> 190.60 </td> </tr>\n  <tr> <td> 19912.00 </td> <td align=\"right\"> 227.82 </td> <td align=\"right\"> 189.03 </td> </tr>\n  <tr> <td> 19913.00 </td> <td align=\"right\"> 228.68 </td> <td align=\"right\"> 188.98 </td> </tr>\n  <tr> <td> 19914.00 </td> <td align=\"right\"> 232.98 </td> <td align=\"right\"> 191.18 </td> </tr>\n  <tr> <td> 19915.00 </td> <td align=\"right\"> 227.57 </td> <td align=\"right\"> 185.57 </td> </tr>\n  <tr> <td> 19916.00 </td> <td align=\"right\"> 230.54 </td> <td align=\"right\"> 185.07 </td> </tr>\n   </tbody> </table>"
 # Above is the expected HTML for the stock_table table. 
 # However, the actual data and date of stock prices will change. 
@@ -386,29 +437,26 @@ transform_html <- function(html) {
   transformed_html <- transform_html(stock_table)
   
  })
-
 ```
 
-## Knowledge base 
+## Knowledge base
 
-- External resources
+-   External resources
 
-- Namespacing for dynamic UI
+-   Namespacing for dynamic UI
 
-```{.r}
+``` r
 # In R Shiny, when UI elements are generated through server code, they are not automatically namespaced. Therefore, we should always add namespace prefixes to the UI elements to avoid conflicts. 
 
 # Refer to the following documentation for more information: https://mastering-shiny.org/scaling-modules.html#dynamic-ui
-
-
 ```
 
-## Knowledge base 
+## Knowledge base
 
-- Internal processes: 
-- Security and compliance conventions
-- Code and documentation standards
-- Deployment process and environment
+-   Internal processes:
+-   Security and compliance conventions
+-   Code and documentation standards
+-   Deployment process and environment
 
 ## Pretty Code {auto-animate="true"}
 
@@ -684,7 +732,7 @@ Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanc
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|------------|------------------------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |
@@ -793,7 +841,7 @@ Quickly jump to other parts of your presentation
 :::
 
 ::: {layout="[1, 20]"}
-![](images/presentation-menu.png){width="41"}
+![](images/fundamental_workflow){width="41"}
 
 Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.
 :::

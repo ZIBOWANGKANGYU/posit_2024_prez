@@ -8,9 +8,9 @@
 <link href="shiny_copilot_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="shiny_copilot_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="shiny_copilot_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.557">
+  <meta name="generator" content="quarto-1.5.54">
 
-  <title>GitHub Copilot in R Shiny Development</title>
+  <title>Use GitHub Copilot for R Shiny Development</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -69,7 +69,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -83,7 +83,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -400,7 +400,7 @@
   <link href="shiny_copilot_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
   <script src="shiny_copilot_files/libs/leaflet-binding-2.2.2/leaflet.js"></script>
   <script type="ojs-define">
-  {"contents":[{"name":"actors","value":{"x":[-0.8287,-1.7386,-0.9743,-0.8779,0.5065,-1.9744,-0.3989,0.6703,0.8793,0.6428,-0.4358,-0.4545,-0.9273,-0.8612,-1.4524,-1.0927,-0.1147,-0.7559,-0.5231,0.3495,-0.1883,1.7066,0.2936,0.4077,-0.916,0.3014,-0.4653,-0.8069,0.6198,-2.1644,0.2473,-0.6231,-0.5287,0.4774,-0.573,0.8002,-0.1864,0.728,-1.37,-0.2736,-0.8066,-0.424,1.0488,-1.1075,1.1538,0.1772,-0.725,0.2891,-0.4453,-0.6123,0.3123,-0.4145,-1.8075,1.5421,0.0932,1.3103,0.3349,1.252,-1.0839,0.6351,1.1112,0.964,-0.512,-0.4775,1.4002,-0.7676,0.9033,-1.3569,0.5222,0.0288,-0.83,2.0074,-0.6118,-0.6083,0.1497,1.5622,-3.1534,0.1668,1.3854,-1.7247,-0.8153,-1.0916,-1.1469,0.4235,-1.2632,0.929,0.5883,-0.6174,0.5281,-0.132,-0.6213,1.6512,0.8046,2.2747,0.1872,-0.6096,-0.7545,-0.6652,-2.5302,-1.5278],"y":[-1.116,0.6822,-0.7044,0.6903,-1.0279,1.6401,1.1683,-1.0431,-1.159,1.604,-0.7113,0.8929,0.6298,-0.0622,1.3085,-1.4046,-1.0748,-0.1439,-0.0893,-0.7761,-0.805,0.0691,-0.1425,0.9052,-0.9905,-0.5298,-0.2368,0.4505,1.7928,0.0055,0.5193,-0.8245,0.3612,-0.3102,0.9017,-0.4454,-0.168,-0.8078,-2.2078,0.1225,-0.4402,0.7897,1.0461,0.1446,0.5265,-0.1139,0.0323,-0.3855,-0.0985,0.5021,0.2601,-0.9606,1.5841,0.5126,-0.7613,0.2749,-1.4812,0.3019,-1.9522,0.2512,1.7581,1.7951,0.4217,0.3829,0.2027,0.5981,0.0077,-0.4797,-0.2835,0.7838,0.0153,-0.3672,1.4965,-0.0107,-0.0884,-0.5846,-0.5793,0.5919,-0.1709,-3.093,-0.8863,-1.0816,1.2229,1.2257,-0.5616,1.5192,-0.4546,-0.9751,0.3946,-0.1348,-0.1279,-0.3663,-0.5321,0.0171,-0.6077,0.8698,-0.4489,-0.6179,0.0767,-0.3331]}}]}
+  {"contents":[{"name":"actors","value":{"x":[-1.4436,-0.0547,1.3365,1.1386,-0.3962,0.5568,-0.6416,-0.2676,-0.0076,-1.9402,0.2574,-1.9175,2.3459,0.8,-1.7005,-0.2286,-0.001,1.8911,-1.3554,0.5044,-0.3189,-0.0015,0.9391,2.0066,3.1409,0.9084,-0.6646,0.5749,-0.3665,-1.7578,-0.0542,-1.2633,-0.4444,-0.5868,-0.558,1.9495,0.6147,0.4891,0.1534,0.5659,0.5612,-0.3002,-2.296,1.105,-1.6996,0.3598,-1.1386,0.3287,-0.1327,-0.2835,-0.0888,1.1735,-0.7514,-0.4878,-0.8217,0.3488,-0.8136,0.4961,0.3663,0.3412,1.3746,-0.3054,-0.9246,-1.2574,-0.2975,-1.3103,-0.3212,-0.9577,-1.3479,2.7105,-0.2623,-0.588,-0.0864,-0.1046,-1.0116,1.5,-0.525,0.7744,-1.0732,-0.1394,0.9355,-0.8492,-0.8944,-0.5133,1.4385,1.2886,-0.7821,1.6326,-1.7554,-0.2874,0.016,0.2383,0.2403,-1.1791,0.9557,-0.0557,-0.3478,1.5044,-0.0983,-0.128],"y":[0.594,-1.3725,-1.424,-0.2236,0.8383,-0.2694,0.8411,-1.298,-0.9652,0.4455,-0.0884,1.6673,1.1132,-0.1844,0.9576,-0.8802,-0.3713,0.6185,1.2665,0.1271,-0.8527,-0.1135,0.2796,0.4492,0.0492,-0.2088,2.04,2.1184,0.1809,-1.3074,0.5086,-0.3491,0.0545,0.1326,-0.7223,-0.5113,-0.5305,0.2005,-0.1641,-0.1624,-0.691,-0.2728,-0.2351,0.0204,-0.6126,-1.2129,1.338,0.8464,-0.0316,-0.4955,-0.0744,-0.4595,1.1205,0.7929,-2.0653,-2.5445,-1.7024,0.961,1.7584,1.1683,1.0223,0.5015,2.7313,1.4866,-0.4897,-1.054,-1.6382,1.6015,1.1165,0.2029,0.9681,0.2285,-1.2713,0.391,-0.3171,1.5681,-0.2161,-0.9007,2.0128,0.5403,-1.1507,0.1894,0.5498,-0.5325,-0.1836,-0.4465,0.0044,0.2441,-2.5043,-0.8893,-2.3897,1.7845,-0.4438,-0.2277,0.8125,-0.2134,-2.345,0.5429,0.0855,0.2346]}}]}
   </script>
 </head>
 <body class="quarto-light">
@@ -408,35 +408,51 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">GitHub Copilot in R Shiny Development</h1>
-  <p class="subtitle">Create beautiful interactive slide decks with Reveal.js</p>
+  <h1 class="title">Use GitHub Copilot for R Shiny Development</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="is-this-a-shiny-app" class="slide level2">
-<h2>Is this a Shiny app?</h2>
-<p>PUT IN app_1: will host on shinyapps.io</p>
+<section id="is-this-a-shiny-app" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Is this a Shiny app?</h2>
+<p><a href="https://posit.cloud/content/8438880"><strong>A Shiny App</strong></a></p>
 </section>
-<section id="is-this-a-shiny-app-1" class="slide level2">
-<h2>Is this a Shiny app???</h2>
-<p>PUT IN external app: will host on shinyapps.io</p>
+<section id="is-this-a-shiny-app-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Is this a Shiny app???</h2>
+<p><a href="https://posit.cloud/content/8438880"><strong>A Shiny App</strong></a></p>
+<p><a href="https://posit.cloud/content/8438826"><strong>Another Shiny App</strong></a></p>
 </section>
-<section id="github-copilot" class="slide level2">
-<h2>GitHub Copilot</h2>
-<p>ADD basic information about copilot (how it is different from chattr) and its productivity boost</p>
+<section id="github-copilot" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">GitHub Copilot</h2>
+<ul>
+<li>7-22%</li>
+<li>1.5T $</li>
+<li>75%</li>
+</ul>
+<div class="footer">
+<p><a href="https://mit-genai.pubpub.org/pub/v5iixksv/release/2">“The Productivity Effects of Generative AI: Evidence from a Field Experiment with GitHub Copilot”</a></p>
+<p><a href="https://github.blog/2023-06-27-the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/">“Sea Change in Software Development: Economic and Productivity Analysis of the AI-Powered Developer Lifecycle”</a></p>
+<p><a href="https://stackoverflow.blog/2024/05/29/developers-get-by-with-a-little-help-from-ai-stack-overflow-knows-code-assistant-pulse-survey-results/">“Developers get by with a little help from AI: Stack Overflow Knows code assistant pulse survey results.”</a></p>
+</div>
 </section>
-<section id="shiny-is-a-pain-if" class="slide level2">
-<h2>Shiny is a pain if …</h2>
+<section id="shiny-is-a-pain-because" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Shiny is a pain because …</h2>
+<p>If you are a data professional using R, try <strong>GitHub Copilot with Shiny first!</strong></p>
+</section>
+<section id="shiny-is-a-pain-because-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Shiny is a pain because …</h2>
+<p>If you are a data professional using R, try <strong>GitHub Copilot with Shiny first!</strong></p>
 <ul>
 <li>UI / front-end tasks</li>
 <li>Routine / tedious tasks</li>
 </ul>
+<div class="footer">
+<p><a href="https://www.jetbrains.com/lp/devecosystem-2023/r/">“The State of Developer Ecosystem 2023”</a></p>
+</div>
 </section>
 <section id="interacting-with-copilot" class="slide level2">
 <h2>Interacting with Copilot</h2>
-<p>Zeroth / simple example: focus on using Copilot with rstudio</p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Prerequisites</p>
@@ -452,37 +468,122 @@
 <li><p>RStudio IDE</p></li>
 <li><p>Positron? use <code>chattr</code> package</p></li>
 </ul>
+</div></div>
+</section>
+<section id="get-started" class="slide level2">
+<h2>Get Started</h2>
+<iframe data-external="1" src="https://www.youtube.com/embed/s4cvpv4G1L0" width="1250" height="580" title="Get Started with GitHub Copilot?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="the-basic-workflow" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">The basic workflow</h2>
+
+<img data-src="images/fundamental_workflow.svg" width="41" class="r-stretch"></section>
+<section id="prompt-and-response" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Prompt and response</h2>
+
+<img data-src="images/fundamental_workflow_1.svg" width="41" class="r-stretch"></section>
+<section id="writing-prompts" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Writing prompts</h2>
+<p>Tell Copilot what you want to do.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Effective prompts</p>
+<ul>
+<li><p>Single</p></li>
+<li><p>Short</p></li>
+<li><p>Specific</p></li>
+</ul>
+</div><div class="column" style="width:20%;">
+
+</div><div class="column" style="width:40%;">
+<p>Type of prompts</p>
+<ul>
+<li><p>Command</p></li>
+<li><p>Question</p></li>
+<li><p>Lead-in</p></li>
+</ul>
+</div></div>
+<div class="footer">
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226">“Single, Short, Specific - Prompting GitHub Copilot for Visual Studio”</a></p>
 </div>
-</div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>Video: enabling Copilot in RStudio IDE</p>
+<section id="writing-prompts-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Writing prompts</h2>
+<ul>
+<li>Single</li>
+</ul>
+<pre><code>Create UI for a beautiful desk booking application using an interactive
+calendar. The UI should allow users to select a date and time to book a
+desk. It should show a calendar with information about all booked
+desks.</code></pre>
 </section>
-<section id="first-try-with-copilot" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">First try with Copilot</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="co"># Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="writing-prmopts" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Writing prmopts</h2>
+<ul>
+<li>Single</li>
+</ul>
+<div class="sourceCode" id="cb2" data-code-line-numbers="2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb2-2" class="hljs-ln-code"><a href=""></a><span class="co"># Create simple sidebar UI using bslib package. </span></span>
+<span id="cb2-3" class="hljs-ln-code"><a href=""></a><span class="co"># Change the UI above. Put date and desk selection dropdown menus in the sidebar.</span></span>
+<span id="cb2-4" class="hljs-ln-code"><a href=""></a><span class="co"># Put a calendar in the main panel.</span></span>
+<span id="cb2-5" class="hljs-ln-code"><a href=""></a><span class="co"># ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="first-try-with-copilot-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">First try with Copilot</h2>
-<div class="sourceCode" id="cb2" data-code-line-numbers="1|3-18"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href=""></a><span class="co"># Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. </span></span>
-<span id="cb2-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb2-3" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb2-4" class="hljs-ln-code"><a href=""></a>  <span class="fu">titlePanel</span>(<span class="st">"Desk Booking App"</span>),</span>
-<span id="cb2-5" class="hljs-ln-code"><a href=""></a>  <span class="fu">sidebarLayout</span>(</span>
-<span id="cb2-6" class="hljs-ln-code"><a href=""></a>    <span class="fu">sidebarPanel</span>(</span>
-<span id="cb2-7" class="hljs-ln-code"><a href=""></a>      <span class="fu">h3</span>(<span class="st">"Welcome to the Desk Booking App!"</span>),</span>
-<span id="cb2-8" class="hljs-ln-code"><a href=""></a>      <span class="fu">h4</span>(<span class="st">"Please select the date and time you would like to book a desk."</span>),</span>
-<span id="cb2-9" class="hljs-ln-code"><a href=""></a>      <span class="fu">dateInput</span>(<span class="st">"date"</span>, <span class="st">"Select a date:"</span>, <span class="at">value =</span> <span class="fu">Sys.Date</span>()),</span>
-<span id="cb2-10" class="hljs-ln-code"><a href=""></a>      <span class="fu">selectInput</span>(<span class="st">"time"</span>, <span class="st">"Select a time:"</span>, <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"9:00 AM"</span>, <span class="st">"10:00 AM"</span>, <span class="st">"11:00 AM"</span>, <span class="st">"12:00 PM"</span>, <span class="st">"1:00 PM"</span>, <span class="st">"2:00 PM"</span>, <span class="st">"3:00 PM"</span>, <span class="st">"4:00 PM"</span>, <span class="st">"5:00 PM"</span>)),</span>
-<span id="cb2-11" class="hljs-ln-code"><a href=""></a>      <span class="fu">actionButton</span>(<span class="st">"book"</span>, <span class="st">"Book Desk"</span>)</span>
-<span id="cb2-12" class="hljs-ln-code"><a href=""></a>    ),</span>
-<span id="cb2-13" class="hljs-ln-code"><a href=""></a>    <span class="fu">mainPanel</span>(</span>
-<span id="cb2-14" class="hljs-ln-code"><a href=""></a>      <span class="fu">h3</span>(<span class="st">"Desk Booking Confirmation"</span>),</span>
-<span id="cb2-15" class="hljs-ln-code"><a href=""></a>      <span class="fu">textOutput</span>(<span class="st">"confirmation"</span>)</span>
-<span id="cb2-16" class="hljs-ln-code"><a href=""></a>    )</span>
-<span id="cb2-17" class="hljs-ln-code"><a href=""></a>  )</span>
-<span id="cb2-18" class="hljs-ln-code"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="writing-prompts-2" class="slide level2">
+<h2>Writing prompts</h2>
+<ul>
+<li>Specific Know the package / function you want to use If not sure, ask Copilot</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
+<span id="cb3-2"><a href=""></a><span class="co"># What packages in R provide advanced functionality for creating interactive calendars?</span></span>
+<span id="cb3-3"><a href=""></a></span>
+<span id="cb3-4"><a href=""></a><span class="co"># Anwer: shinyWidgets, shinyCal, shinyCalender, shinyCalenderPlus</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="writing-prompts-3" class="slide level2">
+<h2>Writing prompts</h2>
+<ul>
+<li>Short</li>
+</ul>
+<div class="sourceCode" id="cb4" data-code-line-numbers=""><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co"># I really want users to be able to create new events in the calendar. </span></span>
+<span id="cb4-2"><a href=""></a><span class="co"># The user should be able to click or drag on dates, and then a pop-up window should appear to let users put in event details. </span></span>
+<span id="cb4-3"><a href=""></a><span class="co"># Once events have been created, they should appear on the calendar. </span></span>
+<span id="cb4-4"><a href=""></a><span class="co"># The suggestions I have got so far do not allow users to create new events. In other words, they are not interactive. </span></span>
+<span id="cb4-5"><a href=""></a><span class="co"># I need a package that creates INTERACTIVE calendars. </span></span>
+<span id="cb4-6"><a href=""></a><span class="co"># Which package in R should I use?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Find other help</li>
+</ul>
+</section>
+<section id="writing-prompts-4" class="slide level2">
+<h2>Writing prompts</h2>
+<ul>
+<li>Specific</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># Create a calendar input using the toastui package in the main panel</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="prompt-and-response-1" class="slide level2">
+<h2>Prompt and response</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="co"># Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="the-prompt-response-workflow" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">The prompt-response workflow</h2>
+<div class="sourceCode" id="cb7" data-code-line-numbers="1|3-18"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a href=""></a><span class="co"># Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. </span></span>
+<span id="cb7-2" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb7-3" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb7-4" class="hljs-ln-code"><a href=""></a>  <span class="fu">titlePanel</span>(<span class="st">"Desk Booking App"</span>),</span>
+<span id="cb7-5" class="hljs-ln-code"><a href=""></a>  <span class="fu">sidebarLayout</span>(</span>
+<span id="cb7-6" class="hljs-ln-code"><a href=""></a>    <span class="fu">sidebarPanel</span>(</span>
+<span id="cb7-7" class="hljs-ln-code"><a href=""></a>      <span class="fu">h3</span>(<span class="st">"Welcome to the Desk Booking App!"</span>),</span>
+<span id="cb7-8" class="hljs-ln-code"><a href=""></a>      <span class="fu">h4</span>(<span class="st">"Please select the date and time you would like to book a desk."</span>),</span>
+<span id="cb7-9" class="hljs-ln-code"><a href=""></a>      <span class="fu">dateInput</span>(<span class="st">"date"</span>, <span class="st">"Select a date:"</span>, <span class="at">value =</span> <span class="fu">Sys.Date</span>()),</span>
+<span id="cb7-10" class="hljs-ln-code"><a href=""></a>      <span class="fu">selectInput</span>(<span class="st">"time"</span>, <span class="st">"Select a time:"</span>, <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"9:00 AM"</span>, <span class="st">"10:00 AM"</span>, <span class="st">"11:00 AM"</span>, <span class="st">"12:00 PM"</span>, <span class="st">"1:00 PM"</span>, <span class="st">"2:00 PM"</span>, <span class="st">"3:00 PM"</span>, <span class="st">"4:00 PM"</span>, <span class="st">"5:00 PM"</span>)),</span>
+<span id="cb7-11" class="hljs-ln-code"><a href=""></a>      <span class="fu">actionButton</span>(<span class="st">"book"</span>, <span class="st">"Book Desk"</span>)</span>
+<span id="cb7-12" class="hljs-ln-code"><a href=""></a>    ),</span>
+<span id="cb7-13" class="hljs-ln-code"><a href=""></a>    <span class="fu">mainPanel</span>(</span>
+<span id="cb7-14" class="hljs-ln-code"><a href=""></a>      <span class="fu">h3</span>(<span class="st">"Desk Booking Confirmation"</span>),</span>
+<span id="cb7-15" class="hljs-ln-code"><a href=""></a>      <span class="fu">textOutput</span>(<span class="st">"confirmation"</span>)</span>
+<span id="cb7-16" class="hljs-ln-code"><a href=""></a>    )</span>
+<span id="cb7-17" class="hljs-ln-code"><a href=""></a>  )</span>
+<span id="cb7-18" class="hljs-ln-code"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="set-the-context" class="slide level2">
 <h2>Set the context</h2>
@@ -516,16 +617,16 @@
 </section>
 <section id="set-the-context-2" class="slide level2">
 <h2>Set the context</h2>
-<div class="sourceCode" id="cb4" data-code-line-numbers="|8|9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href=""></a></span>
-<span id="cb4-2"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb4-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
-<span id="cb4-4"><a href=""></a>...</span>
-<span id="cb4-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb4-6"><a href=""></a></span>
-<span id="cb4-7"><a href=""></a><span class="co">&lt;!-- </span></span>
-<span id="cb4-8"><a href=""></a><span class="co"># Above is the index.html file. The file is a template for a website's homepage.</span></span>
-<span id="cb4-9"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
-<span id="cb4-10"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9" data-code-line-numbers="|8|9"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href=""></a></span>
+<span id="cb9-2"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href=""></a>...</span>
+<span id="cb9-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb9-6"><a href=""></a></span>
+<span id="cb9-7"><a href=""></a><span class="co">&lt;!-- </span></span>
+<span id="cb9-8"><a href=""></a><span class="co"># Above is the index.html file. The file is a template for a website's homepage.</span></span>
+<span id="cb9-9"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
+<span id="cb9-10"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="know-your-project" class="slide level2">
 <h2>Know your project</h2>
@@ -535,80 +636,23 @@
 <li><p>Bias concerns</p></li>
 <li><p>If not sure, ask Copilot!</p></li>
 </ul>
-<div class="sourceCode" id="cb5" data-code-line-numbers="1,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
-<span id="cb5-2"><a href=""></a><span class="co"># Above is the HTML code for a website's homepage. Does it contain any personal or sensitive information?</span></span>
-<span id="cb5-3"><a href=""></a></span>
-<span id="cb5-4"><a href=""></a><span class="co"># Answer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10" data-code-line-numbers="1,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
+<span id="cb10-2"><a href=""></a><span class="co"># Above is the HTML code for a website's homepage. Does it contain any personal or sensitive information?</span></span>
+<span id="cb10-3"><a href=""></a></span>
+<span id="cb10-4"><a href=""></a><span class="co"># Answer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="refer-to-specific-knowledge" class="slide level2">
 <h2>Refer to specific knowledge</h2>
 <ul>
 <li>chattr package use these simple references</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>    <span class="st">"Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference"</span>,</span>
-<span id="cb6-2"><a href=""></a>    <span class="st">"Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference"</span>,</span>
-<span id="cb6-3"><a href=""></a>    <span class="st">"Use tidyverse packages: readr, ggplot2, dplyr, tidyr"</span>,</span>
-<span id="cb6-4"><a href=""></a>    <span class="st">"For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom"</span>,</span>
-<span id="cb6-5"><a href=""></a>    <span class="st">"Avoid explanations unless requested by user, expecting code only"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="co"># Refer here: https://shiny.posit.co/r/articles/build/html-tags/</span></span>
-<span id="cb7-2"><a href=""></a><span class="co"># for more information on how to convert HTML to Shiny.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="writing-prompts" class="slide level2">
-<h2>Writing prompts</h2>
-<ul>
-<li>What is a prompt? (difference between a prompt and context) for users of genAI.</li>
-</ul>
-</section>
-<section id="writing-prompts-1" class="slide level2">
-<h2>Writing prompts</h2>
-<ul>
-<li>Single</li>
-</ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a></span>
-<span id="cb8-2"><a href=""></a><span class="co"># Create UI for a beautiful desk booking application using an interactive calendar. The UI should allow users to select a date and time to book a desk. It should show a calendar with information about all booked desks. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="writing-prmopts" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Writing prmopts</h2>
-<ul>
-<li>Single Break down big task into smaller steps</li>
-</ul>
-<div class="sourceCode" id="cb9" data-code-line-numbers="2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb9-2" class="hljs-ln-code"><a href=""></a><span class="co"># Create simple sidebar UI using bslib package. </span></span>
-<span id="cb9-3" class="hljs-ln-code"><a href=""></a><span class="co"># Change the UI above. Put date and desk selection dropdown menus in the sidebar.</span></span>
-<span id="cb9-4" class="hljs-ln-code"><a href=""></a><span class="co"># Put a calendar in the main panel.</span></span>
-<span id="cb9-5" class="hljs-ln-code"><a href=""></a><span class="co"># ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="writing-prompts-2" class="slide level2">
-<h2>Writing prompts</h2>
-<ul>
-<li>Specific Know the package / function you want to use If not sure, ask Copilot</li>
-</ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
-<span id="cb10-2"><a href=""></a><span class="co"># What packages in R provide advanced functionality for creating interactive calendars?</span></span>
-<span id="cb10-3"><a href=""></a></span>
-<span id="cb10-4"><a href=""></a><span class="co"># Anwer: shinyWidgets, shinyCal, shinyCalender, shinyCalenderPlus</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="writing-prompts-3" class="slide level2">
-<h2>Writing prompts</h2>
-<ul>
-<li>Short</li>
-</ul>
-<div class="sourceCode" id="cb11" data-code-line-numbers=""><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="co"># I really want users to be able to create new events in the calendar. </span></span>
-<span id="cb11-2"><a href=""></a><span class="co"># The user should be able to click or drag on dates, and then a pop-up window should appear to let users put in event details. </span></span>
-<span id="cb11-3"><a href=""></a><span class="co"># Once events have been created, they should appear on the calendar. </span></span>
-<span id="cb11-4"><a href=""></a><span class="co"># The suggestions I have got so far do not allow users to create new events. In other words, they are not interactive. </span></span>
-<span id="cb11-5"><a href=""></a><span class="co"># I need a package that creates INTERACTIVE calendars. </span></span>
-<span id="cb11-6"><a href=""></a><span class="co"># Which package in R should I use?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Find other help</li>
-</ul>
-</section>
-<section id="writing-prompts-4" class="slide level2">
-<h2>Writing prompts</h2>
-<ul>
-<li>Specific</li>
-</ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="co"># Create a calendar input using the toastui package in the main panel</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>    <span class="st">"Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference"</span>,</span>
+<span id="cb11-2"><a href=""></a>    <span class="st">"Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference"</span>,</span>
+<span id="cb11-3"><a href=""></a>    <span class="st">"Use tidyverse packages: readr, ggplot2, dplyr, tidyr"</span>,</span>
+<span id="cb11-4"><a href=""></a>    <span class="st">"For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom"</span>,</span>
+<span id="cb11-5"><a href=""></a>    <span class="st">"Avoid explanations unless requested by user, expecting code only"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="co"># Refer here: https://shiny.posit.co/r/articles/build/html-tags/</span></span>
+<span id="cb12-2"><a href=""></a><span class="co"># for more information on how to convert HTML to Shiny.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="iteration" class="slide level2">
 <h2>Iteration</h2>
@@ -734,12 +778,45 @@
 </section>
 <section id="iteration-8" class="slide level2">
 <h2>Iteration</h2>
+<ul>
+<li>Modifying dynamic data to work in browser tests</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href=""></a><span class="st">"&lt;table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'&gt;</span><span class="sc">\n</span><span class="st">&lt;thead&gt; &lt;tr&gt; &lt;th style='text-align: left;'&gt; date &lt;/th&gt; &lt;th style='text-align: right;'&gt; AAPL &lt;/th&gt; &lt;th style='text-align: right;'&gt; GOOGL &lt;/th&gt;  &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19844.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.30 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 163.86 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19845.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.03 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 166.62 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19846.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.38 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 167.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19849.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 181.71 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.10 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19850.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.40 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 171.25 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19851.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.74 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.38 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19852.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.57 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.96 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19853.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.05 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.65 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19856.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.28 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.14 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19857.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 187.43 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 170.34 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19858.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.72 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.51 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19859.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.84 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.18 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19860.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.87 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.06 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19863.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.04 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.92 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19864.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.35 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.85 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19865.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.90 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.38 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19866.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.88 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.55 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19867.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.98 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.99 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19871.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.99 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.40 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19872.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.90 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19873.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.11 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19874.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.25 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.50 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19877.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.03 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.17 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19878.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.35 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19879.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 195.87 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.41 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19880.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.48 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.73 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19881.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 196.89 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.46 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19884.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 193.12 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.01 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19885.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.15 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.62 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19886.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.07 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19887.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.24 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.16 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19888.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 212.49 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19891.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.67 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19892.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.09 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19894.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.68 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.30 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19895.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.49 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.63 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19898.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 208.14 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.22 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19899.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.07 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.03 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19900.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.25 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.88 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19901.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.10 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.41 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19902.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 210.62 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.15 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19905.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.75 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.99 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19906.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 220.27 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19907.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 221.55 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.82 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19909.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 226.34 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.60 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19912.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.82 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.03 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19913.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 228.68 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 188.98 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19914.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 232.98 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.18 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19915.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.57 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.57 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19916.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 230.54 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.07 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">   &lt;/tbody&gt; &lt;/table&gt;"</span></span>
+<span id="cb20-2"><a href=""></a><span class="co"># Above is the expected HTML for the stock_table table. </span></span>
+<span id="cb20-3"><a href=""></a><span class="co"># However, the actual data and date of stock prices will change. </span></span>
+<span id="cb20-4"><a href=""></a><span class="co"># We need to create a function to transform the HTML into a format that can be compared.</span></span>
+<span id="cb20-5"><a href=""></a><span class="co"># The function below will remove the date and close price values from the HTML.</span></span>
+<span id="cb20-6"><a href=""></a><span class="co"># This will allow us to compare the HTML without worrying about the actual values.</span></span>
+<span id="cb20-7"><a href=""></a></span>
+<span id="cb20-8"><a href=""></a>transform_html <span class="ot">&lt;-</span> <span class="cf">function</span>(html) {</span>
+<span id="cb20-9"><a href=""></a> <span class="co"># Remove the date values</span></span>
+<span id="cb20-10"><a href=""></a> html <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"&lt;td&gt; [0-9]+</span><span class="sc">\\</span><span class="st">.[0-9]+ &lt;/td&gt;"</span>, <span class="st">"&lt;td&gt; DATE &lt;/td&gt;"</span>, html)</span>
+<span id="cb20-11"><a href=""></a> <span class="co"># Remove the close price values</span></span>
+<span id="cb20-12"><a href=""></a> html <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"&lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; [0-9]+</span><span class="sc">\\</span><span class="st">.[0-9]+ &lt;/td&gt;"</span>, <span class="st">"&lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; CLOSE &lt;/td&gt;"</span>, html)</span>
+<span id="cb20-13"><a href=""></a> <span class="fu">return</span>(html)</span>
+<span id="cb20-14"><a href=""></a>}</span>
+<span id="cb20-15"><a href=""></a> </span>
+<span id="cb20-16"><a href=""></a>  transformed_html <span class="ot">&lt;-</span> <span class="fu">transform_html</span>(stock_table)</span>
+<span id="cb20-17"><a href=""></a>  </span>
+<span id="cb20-18"><a href=""></a> <span class="er">})</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="knowledge-base" class="slide level2">
 <h2>Knowledge base</h2>
 <ul>
-<li>External resouces</li>
-<li>Internal processes</li>
+<li><p>External resources</p></li>
+<li><p>Namespacing for dynamic UI</p></li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="co"># In R Shiny, when UI elements are generated through server code, they are not automatically namespaced. Therefore, we should always add namespace prefixes to the UI elements to avoid conflicts. </span></span>
+<span id="cb21-2"><a href=""></a></span>
+<span id="cb21-3"><a href=""></a><span class="co"># Refer to the following documentation for more information: https://mastering-shiny.org/scaling-modules.html#dynamic-ui</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="knowledge-base-1" class="slide level2">
+<h2>Knowledge base</h2>
+<ul>
+<li>Internal processes:</li>
+<li>Security and compliance conventions</li>
+<li>Code and documentation standards</li>
+<li>Deployment process and environment</li>
 </ul>
 </section>
 <section id="pretty-code" class="slide level2" data-auto-animate="true">
@@ -758,18 +835,18 @@
 <li>Over 20 syntax highlighting themes available</li>
 <li>Default theme optimized for accessibility</li>
 </ul>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb20-1" class="hljs-ln-code"><a href=""></a><span class="co"># Define a server for the Shiny app</span></span>
-<span id="cb20-2" class="hljs-ln-code"><a href=""></a><span class="cf">function</span>(input, output) {</span>
-<span id="cb20-3" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb20-4" class="hljs-ln-code"><a href=""></a>  <span class="co"># Fill in the spot we created for a plot</span></span>
-<span id="cb20-5" class="hljs-ln-code"><a href=""></a>  output<span class="sc">$</span>phonePlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb20-6" class="hljs-ln-code"><a href=""></a>    <span class="co"># Render a barplot</span></span>
-<span id="cb20-7" class="hljs-ln-code"><a href=""></a>    <span class="fu">barplot</span>(WorldPhones[,input<span class="sc">$</span>region]<span class="sc">*</span><span class="dv">1000</span>, </span>
-<span id="cb20-8" class="hljs-ln-code"><a href=""></a>            <span class="at">main=</span>input<span class="sc">$</span>region,</span>
-<span id="cb20-9" class="hljs-ln-code"><a href=""></a>            <span class="at">ylab=</span><span class="st">"Number of Telephones"</span>,</span>
-<span id="cb20-10" class="hljs-ln-code"><a href=""></a>            <span class="at">xlab=</span><span class="st">"Year"</span>)</span>
-<span id="cb20-11" class="hljs-ln-code"><a href=""></a>  })</span>
-<span id="cb20-12" class="hljs-ln-code"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb22-1" class="hljs-ln-code"><a href=""></a><span class="co"># Define a server for the Shiny app</span></span>
+<span id="cb22-2" class="hljs-ln-code"><a href=""></a><span class="cf">function</span>(input, output) {</span>
+<span id="cb22-3" class="hljs-ln-code"><a href=""></a>  </span>
+<span id="cb22-4" class="hljs-ln-code"><a href=""></a>  <span class="co"># Fill in the spot we created for a plot</span></span>
+<span id="cb22-5" class="hljs-ln-code"><a href=""></a>  output<span class="sc">$</span>phonePlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb22-6" class="hljs-ln-code"><a href=""></a>    <span class="co"># Render a barplot</span></span>
+<span id="cb22-7" class="hljs-ln-code"><a href=""></a>    <span class="fu">barplot</span>(WorldPhones[,input<span class="sc">$</span>region]<span class="sc">*</span><span class="dv">1000</span>, </span>
+<span id="cb22-8" class="hljs-ln-code"><a href=""></a>            <span class="at">main=</span>input<span class="sc">$</span>region,</span>
+<span id="cb22-9" class="hljs-ln-code"><a href=""></a>            <span class="at">ylab=</span><span class="st">"Number of Telephones"</span>,</span>
+<span id="cb22-10" class="hljs-ln-code"><a href=""></a>            <span class="at">xlab=</span><span class="st">"Year"</span>)</span>
+<span id="cb22-11" class="hljs-ln-code"><a href=""></a>  })</span>
+<span id="cb22-12" class="hljs-ln-code"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#code-animations">Code Animations</a></p>
 </div>
@@ -780,16 +857,16 @@
 <li>Highlight specific lines for emphasis</li>
 <li>Incrementally highlight additional lines</li>
 </ul>
-<div class="sourceCode" id="cb21" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb21-2"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb21-3"><a href=""></a></span>
-<span id="cb21-4"><a href=""></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb21-5"><a href=""></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb21-6"><a href=""></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
-<span id="cb21-7"><a href=""></a>ax.plot(theta, r)</span>
-<span id="cb21-8"><a href=""></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb21-9"><a href=""></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb21-10"><a href=""></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23" data-code-line-numbers="4-5|7|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb23-2"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb23-3"><a href=""></a></span>
+<span id="cb23-4"><a href=""></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb23-5"><a href=""></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb23-6"><a href=""></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: <span class="st">'polar'</span>})</span>
+<span id="cb23-7"><a href=""></a>ax.plot(theta, r)</span>
+<span id="cb23-8"><a href=""></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb23-9"><a href=""></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb23-10"><a href=""></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#line-highlighting">Line Highlighting</a></p>
 </div>
@@ -797,10 +874,10 @@
 <section id="executable-code" class="slide level2">
 <h2>Executable Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb22-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
-<span id="cb22-3"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb22-4"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb24-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb24-4"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="shiny_copilot_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="footer">
@@ -812,17 +889,17 @@
 <p><a href="https://www.mathjax.org/">MathJax</a> rendering of equations to HTML</p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb23-1"><a href=""></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
-<span id="cb23-2"><a href=""></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
-<span id="cb23-3"><a href=""></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
-<span id="cb23-4"><a href=""></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
-<span id="cb23-5"><a href=""></a></span>
-<span id="cb23-6"><a href=""></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb23-7"><a href=""></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
-<span id="cb23-8"><a href=""></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
-<span id="cb23-9"><a href=""></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
-<span id="cb23-10"><a href=""></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
-<span id="cb23-11"><a href=""></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb25-1"><a href=""></a><span class="kw">\begin</span>{<span class="ex">gather*</span>}</span>
+<span id="cb25-2"><a href=""></a><span class="ss">a_1=b_1+c_1</span><span class="sc">\\</span></span>
+<span id="cb25-3"><a href=""></a><span class="ss">a_2=b_2+c_2-d_2+e_2</span></span>
+<span id="cb25-4"><a href=""></a><span class="kw">\end</span>{<span class="ex">gather*</span>}</span>
+<span id="cb25-5"><a href=""></a></span>
+<span id="cb25-6"><a href=""></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb25-7"><a href=""></a><span class="ss">a_{11}&amp; =b_{11}&amp;</span></span>
+<span id="cb25-8"><a href=""></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
+<span id="cb25-9"><a href=""></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
+<span id="cb25-10"><a href=""></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
+<span id="cb25-11"><a href=""></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:60%;">
 <span class="math display">\[\begin{gather*}
 a_1=b_1+c_1\\
@@ -834,8 +911,7 @@ a_{11}&amp; =b_{11}&amp;
 a_{21}&amp; =b_{21}&amp;
   a_{22}&amp; =b_{22}+c_{22}
 \end{align}\]</span>
-</div>
-</div>
+</div></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">LaTeX Equations</a></p>
 </div>
@@ -916,8 +992,7 @@ a_{21}&amp; =b_{21}&amp;
 </table>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#multiple-columns">Multiple Columns</a></p>
 </div>
@@ -1038,8 +1113,8 @@ a_{21}&amp; =b_{21}&amp;
 <p>The next few slides will transition using the <code>slide</code> transition</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 85%">
+<col style="width: 25%">
+<col style="width: 75%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1593,8 +1668,8 @@ a_{21}&amp; =b_{21}&amp;
 <p>Include Jupyter widgets and htmlwidgets in your presentations</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-e246719b1f73da26d2f0" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-e246719b1f73da26d2f0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-8813b775139665a6971f" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-8813b775139665a6971f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="footer">
@@ -1606,9 +1681,9 @@ a_{21}&amp; =b_{21}&amp;
 <p>Turn presentations into applications with Observable and Shiny. Use component layout to position inputs and outputs.</p>
 <div class="layout-sidebar layout-sidebar-left">
 <div class="cell panel-sidebar">
-<div class="sourceCode cell-code hidden" id="cb24" data-startfrom="713" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 712;"><span id="cb24-713"><a href=""></a>viewof talentWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"talent weight"</span> })</span>
-<span id="cb24-714"><a href=""></a>viewof looksWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"looks weight"</span> })</span>
-<span id="cb24-715"><a href=""></a>viewof minimum <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"min fame"</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb26" data-startfrom="799" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 798;"><span id="cb26-799"><a href=""></a>viewof talentWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"talent weight"</span> })</span>
+<span id="cb26-800"><a href=""></a>viewof looksWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"looks weight"</span> })</span>
+<span id="cb26-801"><a href=""></a>viewof minimum <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"min fame"</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -1652,6 +1727,9 @@ a_{21}&amp; =b_{21}&amp;
 <section id="themes" class="slide level2">
 <h2>Themes</h2>
 <p>10 Built-in Themes (or <a href="https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes">create your own</a>)</p>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1671,10 +1749,13 @@ a_{21}&amp; =b_{21}&amp;
 <div style="margin-bottom: 0.9em;">
 <p>Quickly jump to other parts of your presentation</p>
 </div>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1, 20]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
-<p><img data-src="images/presentation-menu.png" width="41"></p>
+<p><img data-src="images/fundamental_workflow.png" width="41"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 95.2%;justify-content: flex-start;">
 <p>Toggle the slide menu with the menu button (bottom left of slide) to go to other slides and access presentation tools.</p>
@@ -1691,6 +1772,9 @@ a_{21}&amp; =b_{21}&amp;
 <div style="margin-bottom: 0.9em;">
 <p>Free form drawing and slide annotations</p>
 </div>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1, 20]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
@@ -1700,6 +1784,9 @@ a_{21}&amp; =b_{21}&amp;
 <p>Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.</p>
 </div>
 </div>
+</div>
+<div>
+
 </div>
 <div class="quarto-layout-panel" data-layout="[1, 20]">
 <div class="quarto-layout-row">
@@ -1741,8 +1828,7 @@ a_{21}&amp; =b_{21}&amp;
 <p><img data-src="images/jupyter-edit.png" class="border border-thick"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/jupyter-preview.png" class="border border-thick"></p>
-</div>
-</div>
+</div></div>
 <div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/tools/jupyter-lab.html">Jupyter</a>, <a href="https://quarto.org/docs/tools/vscode.html">VS Code</a>, <a href="https://quarto.org/docs/tools/text-editors.html">Text Editors</a></p>
 </div>
@@ -1769,7 +1855,7 @@ a_{21}&amp; =b_{21}&amp;
 <div class="quarto-auto-generated-content">
 <p><img src="images/quarto.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://zibowangkangyu.github.io/" class="uri">https://zibowangkangyu.github.io/</a></p>
+<p>Mark Wang for posit::conf(2024)</p>
 </div>
 </div>
 </section>
@@ -2066,18 +2152,7 @@ a_{21}&amp; =b_{21}&amp;
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2109,7 +2184,29 @@ a_{21}&amp; =b_{21}&amp;
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -2117,7 +2214,7 @@ a_{21}&amp; =b_{21}&amp;
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
