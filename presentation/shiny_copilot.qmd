@@ -10,7 +10,6 @@ format:
     logo: images/quarto.png
     css: styles.css
     footer: Mark Wang for posit::conf(2024)
-    
 ---
 
 ```{r}
@@ -35,9 +34,8 @@ library(dplyr)
 
 ## GitHub Copilot {auto-animate="true"}
 
--   7-22%
--   1.5T \$
--   75%
+-   GitHub, OpenAI, Microsoft
+-   Productivity boost
 
 ::: footer
 ["The Productivity Effects of Generative AI: Evidence from a Field Experiment with GitHub Copilot"](https://mit-genai.pubpub.org/pub/v5iixksv/release/2)
@@ -85,10 +83,6 @@ Supported platforms
 :::
 :::
 
-## Get Started
-
-{{< video https://www.youtube.com/embed/s4cvpv4G1L0 title="Get Started with GitHub Copilot?" width="1250" height="580">}}
-
 ## The basic workflow {auto-animate="true"}
 
 ![](images/fundamental_workflow.svg){width="41"}
@@ -101,17 +95,15 @@ Supported platforms
 
 Tell Copilot what you want to do.
 
-
-
 ::: columns
 ::: {.column width="40%"}
 Effective prompts
 
--   Single 
+-   Single
 
--   Short 
+-   Short
 
--   Specific 
+-   Specific
 :::
 
 ::: {.column width="20%"}
@@ -120,11 +112,11 @@ Effective prompts
 ::: {.column width="40%"}
 Type of prompts
 
-- Command
+-   Command
 
-- Question
+-   Question
 
-- Lead-in
+-   Lead-in
 :::
 :::
 
@@ -132,11 +124,11 @@ Type of prompts
 ["Single, Short, Specific - Prompting GitHub Copilot for Visual Studio"](https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226)
 :::
 
-## Writing prompts {auto-animate="true"}
+## Writing prompts
 
 -   Single
 
-``` {.r}
+``` r
 # Create a beautiful stock price tracking application using a 
 # table and a chart. The UI should allow users to select one or 
 # multiple stocks. It should show a table with information about
@@ -144,84 +136,49 @@ Type of prompts
 # time.
 ```
 
-## Writing prmopts {auto-animate="true"}
+## Writing prmopts
 
 -   Single
 
 ``` {.r code-line-numbers="2|3|4"}
 
 # Create simple sidebar UI using bslib package. 
-# Change the UI above. Put date and desk selection dropdown menus in the sidebar.
-# Put a calendar in the main panel.
+# Put a table and a chart in the main panel.
+# Change the UI above. Put stock selection menu in the sidebar.
 # ...
 ```
 
-## Writing prompts
+## Writing prompts {auto-animate="true"}
 
 -   Specific Know the package / function you want to use If not sure, ask Copilot
 
+-   Question as a prompt
+
 ``` {.r code-line-numbers="1"}
 # Please don't provide code but give answer in English. 
-# What packages in R provide advanced functionality for creating interactive calendars?
+# What packages in R provide functionality for selection inputs? The user need to select one or a few stock tickers. 
 
-# Anwer: shinyWidgets, shinyCal, shinyCalender, shinyCalenderPlus
+# Answer:  
 ```
 
-## Writing prompts
+## Writing prompts {auto-animate="true"}
 
--   Short
+-   Specific Know the package / function you want to use If not sure, ask Copilot
 
-``` {.r code-line-numbers=""}
-# I really want users to be able to create new events in the calendar. 
-# The user should be able to click or drag on dates, and then a pop-up window should appear to let users put in event details. 
-# Once events have been created, they should appear on the calendar. 
-# The suggestions I have got so far do not allow users to create new events. In other words, they are not interactive. 
-# I need a package that creates INTERACTIVE calendars. 
-# Which package in R should I use?
-```
-
--   Find other help
-
-## Writing prompts
-
--   Specific
+-   Question as a prompt
 
 ``` {.r code-line-numbers="1"}
-# Create a calendar input using the toastui package in the main panel
-```
+# Please don't provide code but give answer in English. 
+# What packages in R provide functionality for selection inputs? The user need to select one or a few stock tickers. 
 
-## Prompt and response
-
-``` r
-# Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. 
-```
-
-## The prompt-response workflow {auto-animate="true"}
-
-``` {.r code-line-numbers="1|3-18"}
-# Create a beautiful UI for a desk booking app that matches the overall theme of my company's websites. 
-
-ui <- fluidPage(
-  titlePanel("Desk Booking App"),
-  sidebarLayout(
-    sidebarPanel(
-      h3("Welcome to the Desk Booking App!"),
-      h4("Please select the date and time you would like to book a desk."),
-      dateInput("date", "Select a date:", value = Sys.Date()),
-      selectInput("time", "Select a time:", choices = c("9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM")),
-      actionButton("book", "Book Desk")
-    ),
-    mainPanel(
-      h3("Desk Booking Confirmation"),
-      textOutput("confirmation")
-    )
-  )
-)
+# Answer: the shinyWidgets package provides the selectInput function for selection inputs. 
 ```
 
 ## Set the context
 
-First example: UI re-production
+![](images/fundamental_workflow_2.svg){width="41"}
+
+## Set the context
 
 -   Context as code
 
@@ -732,7 +689,7 @@ Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanc
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |
