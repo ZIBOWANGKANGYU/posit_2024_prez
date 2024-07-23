@@ -32,29 +32,17 @@ library(dplyr)
 
 [**Another Shiny App**](https://posit.cloud/content/8438826)
 
-## GitHub Copilot {auto-animate="true"}
-
--   GitHub, OpenAI, Microsoft
--   Productivity boost
-
-::: footer
-["The Productivity Effects of Generative AI: Evidence from a Field Experiment with GitHub Copilot"](https://mit-genai.pubpub.org/pub/v5iixksv/release/2)
-
-["Sea Change in Software Development: Economic and Productivity Analysis of the AI-Powered Developer Lifecycle”](https://github.blog/2023-06-27-the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/)
-
-["Developers get by with a little help from AI: Stack Overflow Knows code assistant pulse survey results."](https://stackoverflow.blog/2024/05/29/developers-get-by-with-a-little-help-from-ai-stack-overflow-knows-code-assistant-pulse-survey-results/)
-:::
-
-## Shiny is a pain because ... {auto-animate="true"}
-
-If you are a data professional using R, try **GitHub Copilot with Shiny first!**
-
-## Shiny is a pain because ... {auto-animate="true"}
-
-If you are a data professional using R, try **GitHub Copilot with Shiny first!**
+## Shiny can be a pain ... {auto-animate="true"}
 
 -   UI / front-end tasks
 -   Routine / tedious tasks
+
+## Shiny can be a pain ... {auto-animate="true"}
+
+-   UI / front-end tasks
+-   Routine / tedious tasks
+
+If you are a data professional using R, try **GitHub Copilot with Shiny first!**
 
 ::: footer
 ["The State of Developer Ecosystem 2023"](https://www.jetbrains.com/lp/devecosystem-2023/r/)
@@ -64,11 +52,13 @@ If you are a data professional using R, try **GitHub Copilot with Shiny first!**
 
 ::: columns
 ::: {.column width="40%"}
-Prerequisites
+Developed by
 
--   A GitHub account
+- GitHub
 
--   A Copilot subscription
+- OpenAI 
+
+- Microsoft
 :::
 
 ::: {.column width="20%"}
@@ -92,8 +82,6 @@ Supported platforms
 ![](images/fundamental_workflow_1.svg){width="41"}
 
 ## Writing prompts {auto-animate="true"}
-
-Tell Copilot what you want to do.
 
 ::: columns
 ::: {.column width="40%"}
@@ -124,21 +112,26 @@ Type of prompts
 ["Single, Short, Specific - Prompting GitHub Copilot for Visual Studio"](https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226)
 :::
 
-## Writing prompts
-
--   Single
+## Writing prompts {auto-animate="true"}
 
 ``` r
 # Create a beautiful stock price tracking application using a 
 # table and a chart. The UI should allow users to select one or 
-# multiple stocks. It should show a table with information about
-# all selected stocks, and a line chart showing price changes over 
-# time.
+# multiple stocks with a dropdown select input. It should show 
+# a table with information about all selected stocks, and a line 
+# chart showing price changes over time.
 ```
 
-## Writing prmopts
+## Writing prompts {auto-animate="true"}
 
--   Single
+``` r
+# Create a beautiful stock price tracking application using a 
+# table and a chart. The UI should allow users to select one or 
+# multiple stocks with a dropdown select input. It should show 
+# a table with information about all selected stocks, and a line 
+# chart showing price changes over time.
+```
+<p>&nbsp;</p>
 
 ``` {.r code-line-numbers="2|3|4"}
 
@@ -150,28 +143,36 @@ Type of prompts
 
 ## Writing prompts {auto-animate="true"}
 
--   Specific Know the package / function you want to use If not sure, ask Copilot
+-   Know the package / function you want to use 
+
+-   If not sure, ask Copilot
 
 -   Question as a prompt
 
-``` {.r code-line-numbers="1"}
+``` {.r code-line-numbers="1|2-3|5"}
 # Please don't provide code but give answer in English. 
-# What packages in R provide functionality for selection inputs? The user need to select one or a few stock tickers. 
+# What packages in R provide functionality for selection inputs? 
+# The user need to select one or a few stock tickers. 
 
 # Answer:  
 ```
 
 ## Writing prompts {auto-animate="true"}
 
--   Specific Know the package / function you want to use If not sure, ask Copilot
+-   Know the package / function you want to use 
+
+-   If not sure, ask Copilot
 
 -   Question as a prompt
 
-``` {.r code-line-numbers="1"}
+``` {.r code-line-numbers="5"}
 # Please don't provide code but give answer in English. 
-# What packages in R provide functionality for selection inputs? The user need to select one or a few stock tickers. 
+# What packages in R provide functionality for selection inputs? 
+# The user need to select one or a few stock tickers. 
 
-# Answer: the shinyWidgets package provides the selectInput function for selection inputs. 
+# Answer: The shiny package provides the functionality for selection inputs.
+# The selectInput function creates a selection input in Shiny.
+
 ```
 
 ## Set the context
@@ -180,7 +181,7 @@ Type of prompts
 
 ## Set the context
 
--   Context as code
+-   Context **as code**
 
 ```{r}
 dir_tree("../ui_reproduction")
@@ -188,15 +189,27 @@ dir_tree("../ui_reproduction")
 
 ## Set the context
 
--   Current active tab
+![](images/context_files.jpg){width="41"}
 
--   Opened tabs
+*   Current active tab
 
--   Index project files
+*   Opened tabs
+
+    + `main.min.js`
+    
+    + `main.css`
+
+*   Index project files
+
+::: footer
+https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/2-prompt-engineering-foundations-best-practices
+:::
 
 ## Set the context
 
-``` {.html code-line-numbers="|8|9"}
+-   Most important context in the current tab
+
+``` {.html code-line-numbers="|8-9|10"}
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -204,14 +217,74 @@ dir_tree("../ui_reproduction")
 </html>
 
 <!-- 
-# Above is the index.html file. The file is a template for a website's homepage.
+# Above is the index.html file. The file is a template for a 
+# website's homepage.
 # Re-create the homepage, but with R Shiny.
 -->
 ```
 
-## Know your project
+## Refer to knowledge on the internet {auto-animate="true"}
+
+``` {.html code-line-numbers="11-12"}
+
+<!doctype html>
+<html lang="en" class="no-js">
+...
+</html>
+
+<!-- 
+# Above is the index.html file. 
+# The file is a template for a website's homepage.
+# Re-create the homepage, but with R Shiny.
+# Refer here: https://shiny.posit.co/r/articles/build/html-tags/
+# for more information on how to convert HTML to Shiny.
+-->
+```
+
+## Refer to knowledge on the internet {auto-animate="true"}
+
+``` r
+
+  c(
+    "Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference",
+    "Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference",
+    "Use tidyverse packages: readr, ggplot2, dplyr, tidyr",
+    "For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom",
+    "Avoid explanations unless requested by user, expecting code only"
+  )
+```
+
+::: footer
+https://github.com/mlverse/chattr/blob/c296963390de1d8727cac72dda301c910c81a624/inst/prompt/script.R#L2
+:::
+
+## Give examples
+
+``` {.html code-line-numbers="13-14"}
+
+<!doctype html>
+<html lang="en" class="no-js">
+...
+</html>
+
+<!-- 
+# Above is the index.html file. 
+# The file is a template for a website's homepage.
+# Re-create the homepage, but with R Shiny.
+# Refer here: https://shiny.posit.co/r/articles/build/html-tags/
+# for more information on how to convert HTML to Shiny.
+# For example, the HTML tag <div class="navicon"> 
+# should be converted to the shiny tag div(class = 'navicon').
+-->
+```
+
+## Not all context helps
+
+![](images/no_completions_available.jpg){width="41"}
 
 "No completions available"???
+
+## Not all context helps
 
 -   Personal information
 
@@ -219,31 +292,38 @@ dir_tree("../ui_reproduction")
 
 -   If not sure, ask Copilot!
 
-``` {.r code-line-numbers="1,4"}
+``` {.r code-line-numbers="1,5"}
 # Please don't provide code but give answer in English. 
-# Above is the HTML code for a website's homepage. Does it contain any personal or sensitive information?
+# Above is the HTML code for a website's homepage. 
+# Does it contain any personal or sensitive information?
 
-# Answer
+# Answer: 
 ```
 
-## Refer to specific knowledge
+## Not all context helps
 
--   chattr package use these simple references
+-   Personal information
 
-``` r
-    "Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference",
-    "Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference",
-    "Use tidyverse packages: readr, ggplot2, dplyr, tidyr",
-    "For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom",
-    "Avoid explanations unless requested by user, expecting code only"
-```
+-   Bias concerns
 
-``` r
-# Refer here: https://shiny.posit.co/r/articles/build/html-tags/
-# for more information on how to convert HTML to Shiny.
+-   If not sure, ask Copilot!
+
+``` {.r code-line-numbers="6-10"}
+# Please don't provide code but give answer in English. 
+# Above is the HTML code for a website's homepage. 
+# Does it contain any personal or sensitive information?
+
+# Answer: 
+# 1. The name of the person is Mark Wang.
+# 2. The person is located in Toronto, ON.
+# 3. The person's LinkedIn profile is https://www.linkedin.com/in/kmarkwang.
+# 4. The person's email address is not provided.
+# 5. The person's image is provided in the HTML code.
 ```
 
 ## Iteration
+
+![](images/fundamental_workflow_3.svg){width="41"}
 
 Third example: Shiny testing
 
@@ -251,7 +331,7 @@ Third example: Shiny testing
 -   Server tests
 -   Browser tests
 
-## Iteration
+## Copilot for R Shiny tests
 
 -   Documentation first
 
@@ -689,7 +769,7 @@ Learn more: [Auto-Animate](https://quarto.org/docs/presentations/revealjs/advanc
 The next few slides will transition using the `slide` transition
 
 | Transition | Description                                                            |
-|-------------------|-----------------------------------------------------|
+|--------------------|----------------------------------------------------|
 | `none`     | No transition (default, switch instantly)                              |
 | `fade`     | Cross fade                                                             |
 | `slide`    | Slide horizontally                                                     |
