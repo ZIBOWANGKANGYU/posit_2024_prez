@@ -7,8 +7,6 @@ format:
     chalkboard: 
       buttons: false
     preview-links: auto
-    logo: images/quarto.png
-    css: styles.css
     footer: Mark Wang for posit::conf(2024)
 ---
 
@@ -50,28 +48,11 @@ If you are a data professional using R, try **GitHub Copilot with Shiny first!**
 
 ## Interacting with Copilot
 
-::: columns
-::: {.column width="40%"}
-Developed by
-
-- GitHub
-
-- OpenAI 
-
-- Microsoft
-:::
-
-::: {.column width="20%"}
-:::
-
-::: {.column width="40%"}
 Supported platforms
 
 -   RStudio IDE
 
 -   Positron? use `chattr` package
-:::
-:::
 
 ## The basic workflow {auto-animate="true"}
 
@@ -147,8 +128,6 @@ Type of prompts
 
 -   If not sure, ask Copilot
 
--   Question as a prompt
-
 ``` {.r code-line-numbers="1|2-3|5"}
 # Please don't provide code but give answer in English. 
 # What packages in R provide functionality for selection inputs? 
@@ -162,8 +141,6 @@ Type of prompts
 -   Know the package / function you want to use 
 
 -   If not sure, ask Copilot
-
--   Question as a prompt
 
 ``` {.r code-line-numbers="5"}
 # Please don't provide code but give answer in English. 
@@ -189,8 +166,11 @@ dir_tree("../ui_reproduction")
 
 ## Set the context
 
-![](images/context_files.jpg){width="41"}
-
+::: columns
+::: {.column width="65%"}
+![](images/context_files.jpg){width="900"}
+:::
+::: {.column width="35%"}
 *   Current active tab
 
 *   Opened tabs
@@ -200,6 +180,9 @@ dir_tree("../ui_reproduction")
     + `main.css`
 
 *   Index project files
+
+:::
+:::
 
 ::: footer
 https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/2-prompt-engineering-foundations-best-practices
@@ -325,6 +308,7 @@ https://github.com/mlverse/chattr/blob/c296963390de1d8727cac72dda301c910c81a624/
 
 ![](images/fundamental_workflow_3.svg){width="41"}
 
+## Iteration
 
 ::: columns
 ::: {.column width="40%"}
@@ -337,18 +321,16 @@ Iteration
 -   Create internal prompt dictionary
 
 :::
-
 ::: {.column width="20%"}
 :::
-
 ::: {.column width="40%"}
 Type of tests
 
 -   Unit tests
 
--   Server tests
-
 -   Browser tests
+
+-   Server tests
 
 :::
 :::
@@ -545,7 +527,7 @@ test_that("stock app server function retrieves stock data", {
 })
 ```
 
-## Knowledge As Prompt Dictionary
+## Knowledge as prompt dictionary
 
 -   Security and compliance conventions
 -   Code and documentation standards
