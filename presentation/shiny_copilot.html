@@ -8,7 +8,7 @@
 <link href="shiny_copilot_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="shiny_copilot_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="shiny_copilot_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.54">
+  <meta name="generator" content="quarto-1.5.53">
 
   <title>Use GitHub Copilot for R Shiny Development</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -461,58 +461,39 @@
 <li><p>Lead-in</p></li>
 </ul>
 </div></div>
+<div class="sourceCode" id="cb1" data-code-line-numbers="2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb1-2" class="hljs-ln-code"><a href=""></a><span class="co"># Create simple sidebar UI using bslib package. </span></span>
+<span id="cb1-3" class="hljs-ln-code"><a href=""></a><span class="co"># Put a table and a chart in the main panel.</span></span>
+<span id="cb1-4" class="hljs-ln-code"><a href=""></a><span class="co"># Change the UI above. Put stock selection menu in the sidebar.</span></span>
+<span id="cb1-5" class="hljs-ln-code"><a href=""></a><span class="co"># ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p><a href="https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226">“Single, Short, Specific - Prompting GitHub Copilot for Visual Studio”</a></p>
 </div>
 </section>
 <section id="writing-prompts-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Writing prompts</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="co"># Create a beautiful stock price tracking application using a </span></span>
-<span id="cb1-2" class="hljs-ln-code"><a href=""></a><span class="co"># table and a chart. The UI should allow users to select one or </span></span>
-<span id="cb1-3" class="hljs-ln-code"><a href=""></a><span class="co"># multiple stocks with a dropdown select input. It should show </span></span>
-<span id="cb1-4" class="hljs-ln-code"><a href=""></a><span class="co"># a table with information about all selected stocks, and a line </span></span>
-<span id="cb1-5" class="hljs-ln-code"><a href=""></a><span class="co"># chart showing price changes over time.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Know the package / function you want to use</p></li>
+<li><p>If not sure, ask Copilot</p></li>
+</ul>
+<div class="sourceCode" id="cb2" data-code-line-numbers="1|2-3|5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
+<span id="cb2-2" class="hljs-ln-code"><a href=""></a><span class="co"># What packages in R provide functionality for selection inputs? </span></span>
+<span id="cb2-3" class="hljs-ln-code"><a href=""></a><span class="co"># The user need to select one or a few stock tickers. </span></span>
+<span id="cb2-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb2-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer:  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="writing-prompts-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Writing prompts</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># Create a beautiful stock price tracking application using a </span></span>
-<span id="cb2-2"><a href=""></a><span class="co"># table and a chart. The UI should allow users to select one or </span></span>
-<span id="cb2-3"><a href=""></a><span class="co"># multiple stocks with a dropdown select input. It should show </span></span>
-<span id="cb2-4"><a href=""></a><span class="co"># a table with information about all selected stocks, and a line </span></span>
-<span id="cb2-5"><a href=""></a><span class="co"># chart showing price changes over time.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>
-&nbsp;
-</p>
-<div class="sourceCode" id="cb3" data-code-line-numbers="2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a></span>
-<span id="cb3-2"><a href=""></a><span class="co"># Create simple sidebar UI using bslib package. </span></span>
-<span id="cb3-3"><a href=""></a><span class="co"># Put a table and a chart in the main panel.</span></span>
-<span id="cb3-4"><a href=""></a><span class="co"># Change the UI above. Put stock selection menu in the sidebar.</span></span>
-<span id="cb3-5"><a href=""></a><span class="co"># ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="writing-prompts-3" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Writing prompts</h2>
 <ul>
 <li><p>Know the package / function you want to use</p></li>
 <li><p>If not sure, ask Copilot</p></li>
 </ul>
-<div class="sourceCode" id="cb4" data-code-line-numbers="1|2-3|5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
-<span id="cb4-2" class="hljs-ln-code"><a href=""></a><span class="co"># What packages in R provide functionality for selection inputs? </span></span>
-<span id="cb4-3" class="hljs-ln-code"><a href=""></a><span class="co"># The user need to select one or a few stock tickers. </span></span>
-<span id="cb4-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb4-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer:  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="writing-prompts-4" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Writing prompts</h2>
-<ul>
-<li><p>Know the package / function you want to use</p></li>
-<li><p>If not sure, ask Copilot</p></li>
-</ul>
-<div class="sourceCode" id="cb5" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
-<span id="cb5-2" class="hljs-ln-code"><a href=""></a><span class="co"># What packages in R provide functionality for selection inputs? </span></span>
-<span id="cb5-3" class="hljs-ln-code"><a href=""></a><span class="co"># The user need to select one or a few stock tickers. </span></span>
-<span id="cb5-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb5-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer: The shiny package provides the functionality for selection inputs.</span></span>
-<span id="cb5-6" class="hljs-ln-code"><a href=""></a><span class="co"># The selectInput function creates a selection input in Shiny.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
+<span id="cb3-2" class="hljs-ln-code"><a href=""></a><span class="co"># What packages in R provide functionality for selection inputs? </span></span>
+<span id="cb3-3" class="hljs-ln-code"><a href=""></a><span class="co"># The user need to select one or a few stock tickers. </span></span>
+<span id="cb3-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb3-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer: The shiny package provides the functionality for selection inputs.</span></span>
+<span id="cb3-6" class="hljs-ln-code"><a href=""></a><span class="co"># The selectInput function creates a selection input in Shiny.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="set-the-context" class="slide level2">
 <h2>Set the context</h2>
@@ -564,65 +545,65 @@
 <ul>
 <li>Most important context in the current tab</li>
 </ul>
-<div class="sourceCode" id="cb7" data-code-line-numbers="|8-9|10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href=""></a></span>
-<span id="cb7-2"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
-<span id="cb7-4"><a href=""></a>...</span>
-<span id="cb7-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb7-6"><a href=""></a></span>
-<span id="cb7-7"><a href=""></a><span class="co">&lt;!-- </span></span>
-<span id="cb7-8"><a href=""></a><span class="co"># Above is the index.html file. The file is a template for a </span></span>
-<span id="cb7-9"><a href=""></a><span class="co"># website's homepage.</span></span>
-<span id="cb7-10"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
-<span id="cb7-11"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-code-line-numbers="|8-9|10"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href=""></a></span>
+<span id="cb5-2"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href=""></a>...</span>
+<span id="cb5-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href=""></a></span>
+<span id="cb5-7"><a href=""></a><span class="co">&lt;!-- </span></span>
+<span id="cb5-8"><a href=""></a><span class="co"># Above is the index.html file. The file is a template for a </span></span>
+<span id="cb5-9"><a href=""></a><span class="co"># website's homepage.</span></span>
+<span id="cb5-10"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
+<span id="cb5-11"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="refer-to-knowledge-on-the-internet" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Refer to knowledge on the internet</h2>
-<div class="sourceCode" id="cb8" data-code-line-numbers="11-12"><pre class="sourceCode numberSource html number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode html hljs"><span id="cb8-1" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb8-2" class="hljs-ln-code"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb8-3" class="hljs-ln-code"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
-<span id="cb8-4" class="hljs-ln-code"><a href=""></a>...</span>
-<span id="cb8-5" class="hljs-ln-code"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb8-6" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb8-7" class="hljs-ln-code"><a href=""></a><span class="co">&lt;!-- </span></span>
-<span id="cb8-8" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the index.html file. </span></span>
-<span id="cb8-9" class="hljs-ln-code"><a href=""></a><span class="co"># The file is a template for a website's homepage.</span></span>
-<span id="cb8-10" class="hljs-ln-code"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
-<span id="cb8-11" class="hljs-ln-code"><a href=""></a><span class="co"># Refer here: https://shiny.posit.co/r/articles/build/html-tags/</span></span>
-<span id="cb8-12" class="hljs-ln-code"><a href=""></a><span class="co"># for more information on how to convert HTML to Shiny.</span></span>
-<span id="cb8-13" class="hljs-ln-code"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-code-line-numbers="11-12"><pre class="sourceCode numberSource html number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode html hljs"><span id="cb6-1" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb6-2" class="hljs-ln-code"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb6-3" class="hljs-ln-code"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
+<span id="cb6-4" class="hljs-ln-code"><a href=""></a>...</span>
+<span id="cb6-5" class="hljs-ln-code"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb6-6" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb6-7" class="hljs-ln-code"><a href=""></a><span class="co">&lt;!-- </span></span>
+<span id="cb6-8" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the index.html file. </span></span>
+<span id="cb6-9" class="hljs-ln-code"><a href=""></a><span class="co"># The file is a template for a website's homepage.</span></span>
+<span id="cb6-10" class="hljs-ln-code"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
+<span id="cb6-11" class="hljs-ln-code"><a href=""></a><span class="co"># Refer here: https://shiny.posit.co/r/articles/build/html-tags/</span></span>
+<span id="cb6-12" class="hljs-ln-code"><a href=""></a><span class="co"># for more information on how to convert HTML to Shiny.</span></span>
+<span id="cb6-13" class="hljs-ln-code"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="refer-to-knowledge-on-the-internet-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Refer to knowledge on the internet</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb9-2" class="hljs-ln-code"><a href=""></a>  <span class="fu">c</span>(</span>
-<span id="cb9-3" class="hljs-ln-code"><a href=""></a>    <span class="st">"Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference"</span>,</span>
-<span id="cb9-4" class="hljs-ln-code"><a href=""></a>    <span class="st">"Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference"</span>,</span>
-<span id="cb9-5" class="hljs-ln-code"><a href=""></a>    <span class="st">"Use tidyverse packages: readr, ggplot2, dplyr, tidyr"</span>,</span>
-<span id="cb9-6" class="hljs-ln-code"><a href=""></a>    <span class="st">"For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom"</span>,</span>
-<span id="cb9-7" class="hljs-ln-code"><a href=""></a>    <span class="st">"Avoid explanations unless requested by user, expecting code only"</span></span>
-<span id="cb9-8" class="hljs-ln-code"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb7-1" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb7-2" class="hljs-ln-code"><a href=""></a>  <span class="fu">c</span>(</span>
+<span id="cb7-3" class="hljs-ln-code"><a href=""></a>    <span class="st">"Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference"</span>,</span>
+<span id="cb7-4" class="hljs-ln-code"><a href=""></a>    <span class="st">"Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference"</span>,</span>
+<span id="cb7-5" class="hljs-ln-code"><a href=""></a>    <span class="st">"Use tidyverse packages: readr, ggplot2, dplyr, tidyr"</span>,</span>
+<span id="cb7-6" class="hljs-ln-code"><a href=""></a>    <span class="st">"For models, use tidymodels packages: recipes, parsnip, yardstick, workflows, broom"</span>,</span>
+<span id="cb7-7" class="hljs-ln-code"><a href=""></a>    <span class="st">"Avoid explanations unless requested by user, expecting code only"</span></span>
+<span id="cb7-8" class="hljs-ln-code"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p>https://github.com/mlverse/chattr/blob/c296963390de1d8727cac72dda301c910c81a624/inst/prompt/script.R#L2</p>
 </div>
 </section>
 <section id="give-examples" class="slide level2">
 <h2>Give examples</h2>
-<div class="sourceCode" id="cb10" data-code-line-numbers="13-14"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href=""></a></span>
-<span id="cb10-2"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
-<span id="cb10-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
-<span id="cb10-4"><a href=""></a>...</span>
-<span id="cb10-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb10-6"><a href=""></a></span>
-<span id="cb10-7"><a href=""></a><span class="co">&lt;!-- </span></span>
-<span id="cb10-8"><a href=""></a><span class="co"># Above is the index.html file. </span></span>
-<span id="cb10-9"><a href=""></a><span class="co"># The file is a template for a website's homepage.</span></span>
-<span id="cb10-10"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
-<span id="cb10-11"><a href=""></a><span class="co"># Refer here: https://shiny.posit.co/r/articles/build/html-tags/</span></span>
-<span id="cb10-12"><a href=""></a><span class="co"># for more information on how to convert HTML to Shiny.</span></span>
-<span id="cb10-13"><a href=""></a><span class="co"># For example, the HTML tag &lt;div class="navicon"&gt; </span></span>
-<span id="cb10-14"><a href=""></a><span class="co"># should be converted to the shiny tag div(class = 'navicon').</span></span>
-<span id="cb10-15"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-code-line-numbers="13-14"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href=""></a></span>
+<span id="cb8-2"><a href=""></a><span class="dt">&lt;!doctype</span> html<span class="dt">&gt;</span></span>
+<span id="cb8-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"no-js"</span><span class="dt">&gt;</span></span>
+<span id="cb8-4"><a href=""></a>...</span>
+<span id="cb8-5"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb8-6"><a href=""></a></span>
+<span id="cb8-7"><a href=""></a><span class="co">&lt;!-- </span></span>
+<span id="cb8-8"><a href=""></a><span class="co"># Above is the index.html file. </span></span>
+<span id="cb8-9"><a href=""></a><span class="co"># The file is a template for a website's homepage.</span></span>
+<span id="cb8-10"><a href=""></a><span class="co"># Re-create the homepage, but with R Shiny.</span></span>
+<span id="cb8-11"><a href=""></a><span class="co"># Refer here: https://shiny.posit.co/r/articles/build/html-tags/</span></span>
+<span id="cb8-12"><a href=""></a><span class="co"># for more information on how to convert HTML to Shiny.</span></span>
+<span id="cb8-13"><a href=""></a><span class="co"># For example, the HTML tag &lt;div class="navicon"&gt; </span></span>
+<span id="cb8-14"><a href=""></a><span class="co"># should be converted to the shiny tag div(class = 'navicon').</span></span>
+<span id="cb8-15"><a href=""></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="not-all-context-helps" class="slide level2">
 <h2>Not all context helps</h2>
@@ -636,11 +617,11 @@
 <li><p>Bias concerns</p></li>
 <li><p>If not sure, ask Copilot!</p></li>
 </ul>
-<div class="sourceCode" id="cb11" data-code-line-numbers="1,5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb11-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
-<span id="cb11-2" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the HTML code for a website's homepage. </span></span>
-<span id="cb11-3" class="hljs-ln-code"><a href=""></a><span class="co"># Does it contain any personal or sensitive information?</span></span>
-<span id="cb11-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb11-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer: </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9" data-code-line-numbers="1,5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb9-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
+<span id="cb9-2" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the HTML code for a website's homepage. </span></span>
+<span id="cb9-3" class="hljs-ln-code"><a href=""></a><span class="co"># Does it contain any personal or sensitive information?</span></span>
+<span id="cb9-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb9-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer: </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="not-all-context-helps-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Not all context helps</h2>
@@ -649,16 +630,16 @@
 <li><p>Bias concerns</p></li>
 <li><p>If not sure, ask Copilot!</p></li>
 </ul>
-<div class="sourceCode" id="cb12" data-code-line-numbers="6-10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb12-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
-<span id="cb12-2" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the HTML code for a website's homepage. </span></span>
-<span id="cb12-3" class="hljs-ln-code"><a href=""></a><span class="co"># Does it contain any personal or sensitive information?</span></span>
-<span id="cb12-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb12-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer: </span></span>
-<span id="cb12-6" class="hljs-ln-code"><a href=""></a><span class="co"># 1. The name of the person is Mark Wang.</span></span>
-<span id="cb12-7" class="hljs-ln-code"><a href=""></a><span class="co"># 2. The person is located in Toronto, ON.</span></span>
-<span id="cb12-8" class="hljs-ln-code"><a href=""></a><span class="co"># 3. The person's LinkedIn profile is https://www.linkedin.com/in/kmarkwang.</span></span>
-<span id="cb12-9" class="hljs-ln-code"><a href=""></a><span class="co"># 4. The person's email address is not provided.</span></span>
-<span id="cb12-10" class="hljs-ln-code"><a href=""></a><span class="co"># 5. The person's image is provided in the HTML code.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10" data-code-line-numbers="6-10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb10-1" class="hljs-ln-code"><a href=""></a><span class="co"># Please don't provide code but give answer in English. </span></span>
+<span id="cb10-2" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the HTML code for a website's homepage. </span></span>
+<span id="cb10-3" class="hljs-ln-code"><a href=""></a><span class="co"># Does it contain any personal or sensitive information?</span></span>
+<span id="cb10-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb10-5" class="hljs-ln-code"><a href=""></a><span class="co"># Answer: </span></span>
+<span id="cb10-6" class="hljs-ln-code"><a href=""></a><span class="co"># 1. The name of the person is Mark Wang.</span></span>
+<span id="cb10-7" class="hljs-ln-code"><a href=""></a><span class="co"># 2. The person is located in Toronto, ON.</span></span>
+<span id="cb10-8" class="hljs-ln-code"><a href=""></a><span class="co"># 3. The person's LinkedIn profile is https://www.linkedin.com/in/kmarkwang.</span></span>
+<span id="cb10-9" class="hljs-ln-code"><a href=""></a><span class="co"># 4. The person's email address is not provided.</span></span>
+<span id="cb10-10" class="hljs-ln-code"><a href=""></a><span class="co"># 5. The person's image is provided in the HTML code.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="iteration" class="slide level2">
 <h2>Iteration</h2>
@@ -690,183 +671,510 @@
 <ul>
 <li>Documentation first</li>
 </ul>
-<div class="sourceCode" id="cb13" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb13-1" class="hljs-ln-code"><a href=""></a>create_stock_table <span class="ot">&lt;-</span> <span class="cf">function</span>(data) {</span>
-<span id="cb13-2" class="hljs-ln-code"><a href=""></a>  stock_data_wide <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">spread</span>(symbol, close) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3" class="hljs-ln-code"><a href=""></a>    <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.character</span>(date))</span>
-<span id="cb13-4" class="hljs-ln-code"><a href=""></a>  stock_data_wide</span>
-<span id="cb13-5" class="hljs-ln-code"><a href=""></a>}</span>
-<span id="cb13-6" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb13-7" class="hljs-ln-code"><a href=""></a><span class="co"># Create documentation for the function create_stock_table above:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb11-1" class="hljs-ln-code"><a href=""></a>create_stock_table <span class="ot">&lt;-</span> <span class="cf">function</span>(data) {</span>
+<span id="cb11-2" class="hljs-ln-code"><a href=""></a>  stock_data_wide <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">spread</span>(symbol, close) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3" class="hljs-ln-code"><a href=""></a>    <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.character</span>(date))</span>
+<span id="cb11-4" class="hljs-ln-code"><a href=""></a>  stock_data_wide</span>
+<span id="cb11-5" class="hljs-ln-code"><a href=""></a>}</span>
+<span id="cb11-6" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb11-7" class="hljs-ln-code"><a href=""></a><span class="co"># Create documentation for the function create_stock_table above:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="copilot-for-r-shiny-tests-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
 <ul>
 <li>Documentation first</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb14-1" class="hljs-ln-code"><a href=""></a><span class="co">#' Create a stock table</span></span>
-<span id="cb14-2" class="hljs-ln-code"><a href=""></a><span class="co">#' </span></span>
-<span id="cb14-3" class="hljs-ln-code"><a href=""></a><span class="co">#' This function creates a stock table from a data frame.</span></span>
-<span id="cb14-4" class="hljs-ln-code"><a href=""></a><span class="co">#' </span></span>
-<span id="cb14-5" class="hljs-ln-code"><a href=""></a><span class="co">#' @param data A data frame with stock data</span></span>
-<span id="cb14-6" class="hljs-ln-code"><a href=""></a><span class="co">#' @return A data frame with stock data in wide format</span></span>
-<span id="cb14-7" class="hljs-ln-code"><a href=""></a><span class="co">#' </span></span>
-<span id="cb14-8" class="hljs-ln-code"><a href=""></a>create_stock_table <span class="ot">&lt;-</span> <span class="cf">function</span>(data) {</span>
-<span id="cb14-9" class="hljs-ln-code"><a href=""></a>  stock_data_wide <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">spread</span>(symbol, close) <span class="sc">%&gt;%</span></span>
-<span id="cb14-10" class="hljs-ln-code"><a href=""></a>    <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.character</span>(date))</span>
-<span id="cb14-11" class="hljs-ln-code"><a href=""></a>  stock_data_wide</span>
-<span id="cb14-12" class="hljs-ln-code"><a href=""></a>}</span>
-<span id="cb14-13" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb14-14" class="hljs-ln-code"><a href=""></a><span class="co"># Now, write unit tests for the function create_stock_table. </span></span>
-<span id="cb14-15" class="hljs-ln-code"><a href=""></a><span class="co"># Use the testthat package and write the tests. </span></span>
-<span id="cb14-16" class="hljs-ln-code"><a href=""></a><span class="co"># Refererence here: https://testthat.r-lib.org/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb12-1" class="hljs-ln-code"><a href=""></a><span class="co">#' Create a stock table</span></span>
+<span id="cb12-2" class="hljs-ln-code"><a href=""></a><span class="co">#' </span></span>
+<span id="cb12-3" class="hljs-ln-code"><a href=""></a><span class="co">#' This function creates a stock table from a data frame.</span></span>
+<span id="cb12-4" class="hljs-ln-code"><a href=""></a><span class="co">#' </span></span>
+<span id="cb12-5" class="hljs-ln-code"><a href=""></a><span class="co">#' @param data A data frame with stock data</span></span>
+<span id="cb12-6" class="hljs-ln-code"><a href=""></a><span class="co">#' @return A data frame with stock data in wide format</span></span>
+<span id="cb12-7" class="hljs-ln-code"><a href=""></a><span class="co">#' </span></span>
+<span id="cb12-8" class="hljs-ln-code"><a href=""></a>create_stock_table <span class="ot">&lt;-</span> <span class="cf">function</span>(data) {</span>
+<span id="cb12-9" class="hljs-ln-code"><a href=""></a>  stock_data_wide <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">spread</span>(symbol, close) <span class="sc">%&gt;%</span></span>
+<span id="cb12-10" class="hljs-ln-code"><a href=""></a>    <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.character</span>(date))</span>
+<span id="cb12-11" class="hljs-ln-code"><a href=""></a>  stock_data_wide</span>
+<span id="cb12-12" class="hljs-ln-code"><a href=""></a>}</span>
+<span id="cb12-13" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb12-14" class="hljs-ln-code"><a href=""></a><span class="co"># Now, write unit tests for the function create_stock_table. </span></span>
+<span id="cb12-15" class="hljs-ln-code"><a href=""></a><span class="co"># Use the testthat package and write the tests. </span></span>
+<span id="cb12-16" class="hljs-ln-code"><a href=""></a><span class="co"># Refererence here: https://testthat.r-lib.org/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="copilot-for-r-shiny-tests-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/html_output.jpg"></p>
+</div><div class="column" style="width:20%;">
+
+</div><div class="column" style="width:50%;">
 <ul>
 <li>From static to dynamic data</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb15-1" class="hljs-ln-code"><a href=""></a><span class="st">"&lt;table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'&gt;</span><span class="sc">\n</span><span class="st">&lt;thead&gt; &lt;tr&gt; &lt;th style='text-align: left;'&gt; date &lt;/th&gt; &lt;th style='text-align: right;'&gt; AAPL &lt;/th&gt; &lt;th style='text-align: right;'&gt; GOOGL &lt;/th&gt;  &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19844.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.30 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 163.86 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19845.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.03 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 166.62 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19846.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.38 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 167.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19849.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 181.71 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.10 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19850.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.40 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 171.25 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19851.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.74 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.38 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19852.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.57 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.96 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19853.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.05 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.65 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19856.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.28 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.14 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19857.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 187.43 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 170.34 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19858.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.72 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.51 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19859.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.84 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.18 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19860.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.87 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.06 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19863.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.04 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.92 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19864.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.35 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.85 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19865.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.90 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.38 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19866.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.88 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.55 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19867.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.98 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.99 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19871.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.99 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.40 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19872.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.90 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19873.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.11 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19874.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.25 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.50 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19877.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.03 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.17 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19878.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.35 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19879.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 195.87 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.41 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19880.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.48 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.73 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19881.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 196.89 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.46 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19884.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 193.12 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.01 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19885.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.15 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.62 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19886.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.07 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19887.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.24 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.16 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19888.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 212.49 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19891.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.67 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19892.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.09 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19894.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.68 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.30 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19895.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.49 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.63 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19898.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 208.14 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.22 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19899.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.07 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.03 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19900.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.25 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.88 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19901.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.10 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.41 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19902.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 210.62 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.15 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19905.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.75 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.99 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19906.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 220.27 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19907.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 221.55 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.82 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19909.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 226.34 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.60 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19912.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.82 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.03 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19913.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 228.68 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 188.98 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19914.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 232.98 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.18 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19915.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.57 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.57 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19916.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 230.54 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.07 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">   &lt;/tbody&gt; &lt;/table&gt;"</span></span>
-<span id="cb15-2" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the expected HTML for the stock_table table. </span></span>
-<span id="cb15-3" class="hljs-ln-code"><a href=""></a><span class="co"># However, the actual data and date of stock prices will change. </span></span>
-<span id="cb15-4" class="hljs-ln-code"><a href=""></a><span class="co"># We need to create a function to transform the HTML into a format that can be compared.</span></span>
-<span id="cb15-5" class="hljs-ln-code"><a href=""></a><span class="co"># The function below will remove the date and close price values from the HTML.</span></span>
-<span id="cb15-6" class="hljs-ln-code"><a href=""></a><span class="co"># This will allow us to compare the HTML without worrying about the actual values.</span></span>
-<span id="cb15-7" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb15-8" class="hljs-ln-code"><a href=""></a>transform_html <span class="ot">&lt;-</span> <span class="cf">function</span>(html) {</span>
-<span id="cb15-9" class="hljs-ln-code"><a href=""></a> <span class="co"># Remove the date values</span></span>
-<span id="cb15-10" class="hljs-ln-code"><a href=""></a> html <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"&lt;td&gt; [0-9]+</span><span class="sc">\\</span><span class="st">.[0-9]+ &lt;/td&gt;"</span>, <span class="st">"&lt;td&gt; DATE &lt;/td&gt;"</span>, html)</span>
-<span id="cb15-11" class="hljs-ln-code"><a href=""></a> <span class="co"># Remove the close price values</span></span>
-<span id="cb15-12" class="hljs-ln-code"><a href=""></a> html <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"&lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; [0-9]+</span><span class="sc">\\</span><span class="st">.[0-9]+ &lt;/td&gt;"</span>, <span class="st">"&lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; CLOSE &lt;/td&gt;"</span>, html)</span>
-<span id="cb15-13" class="hljs-ln-code"><a href=""></a> <span class="fu">return</span>(html)</span>
-<span id="cb15-14" class="hljs-ln-code"><a href=""></a>}</span>
-<span id="cb15-15" class="hljs-ln-code"><a href=""></a> </span>
-<span id="cb15-16" class="hljs-ln-code"><a href=""></a>  transformed_html <span class="ot">&lt;-</span> <span class="fu">transform_html</span>(stock_table)</span>
-<span id="cb15-17" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb15-18" class="hljs-ln-code"><a href=""></a> <span class="er">})</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb13-1" class="hljs-ln-code"><a href=""></a><span class="st">"&lt;table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'&gt;</span></span>
+<span id="cb13-2" class="hljs-ln-code"><a href=""></a><span class="st">   </span><span class="sc">\n</span></span>
+<span id="cb13-3" class="hljs-ln-code"><a href=""></a><span class="st">   &lt;thead&gt;</span></span>
+<span id="cb13-4" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-5" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;th style='text-align: left;'&gt; date &lt;/th&gt;</span></span>
+<span id="cb13-6" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;th style='text-align: right;'&gt; AAPL &lt;/th&gt;</span></span>
+<span id="cb13-7" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;th style='text-align: right;'&gt; GOOGL &lt;/th&gt;</span></span>
+<span id="cb13-8" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-9" class="hljs-ln-code"><a href=""></a><span class="st">   &lt;/thead&gt;</span></span>
+<span id="cb13-10" class="hljs-ln-code"><a href=""></a><span class="st">   &lt;tbody&gt;</span></span>
+<span id="cb13-11" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-12" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-13" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19844.00 &lt;/td&gt;</span></span>
+<span id="cb13-14" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.30 &lt;/td&gt;</span></span>
+<span id="cb13-15" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 163.86 &lt;/td&gt;</span></span>
+<span id="cb13-16" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-17" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-18" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-19" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19845.00 &lt;/td&gt;</span></span>
+<span id="cb13-20" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.03 &lt;/td&gt;</span></span>
+<span id="cb13-21" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 166.62 &lt;/td&gt;</span></span>
+<span id="cb13-22" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-23" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-24" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-25" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19846.00 &lt;/td&gt;</span></span>
+<span id="cb13-26" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.38 &lt;/td&gt;</span></span>
+<span id="cb13-27" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 167.24 &lt;/td&gt;</span></span>
+<span id="cb13-28" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-29" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-30" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-31" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19849.00 &lt;/td&gt;</span></span>
+<span id="cb13-32" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 181.71 &lt;/td&gt;</span></span>
+<span id="cb13-33" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.10 &lt;/td&gt;</span></span>
+<span id="cb13-34" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-35" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-36" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-37" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19850.00 &lt;/td&gt;</span></span>
+<span id="cb13-38" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.40 &lt;/td&gt;</span></span>
+<span id="cb13-39" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 171.25 &lt;/td&gt;</span></span>
+<span id="cb13-40" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-41" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-42" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-43" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19851.00 &lt;/td&gt;</span></span>
+<span id="cb13-44" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.74 &lt;/td&gt;</span></span>
+<span id="cb13-45" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.38 &lt;/td&gt;</span></span>
+<span id="cb13-46" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-47" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-48" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-49" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19852.00 &lt;/td&gt;</span></span>
+<span id="cb13-50" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.57 &lt;/td&gt;</span></span>
+<span id="cb13-51" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.96 &lt;/td&gt;</span></span>
+<span id="cb13-52" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-53" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-54" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-55" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19853.00 &lt;/td&gt;</span></span>
+<span id="cb13-56" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.05 &lt;/td&gt;</span></span>
+<span id="cb13-57" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.65 &lt;/td&gt;</span></span>
+<span id="cb13-58" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-59" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-60" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-61" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19856.00 &lt;/td&gt;</span></span>
+<span id="cb13-62" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.28 &lt;/td&gt;</span></span>
+<span id="cb13-63" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.14 &lt;/td&gt;</span></span>
+<span id="cb13-64" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-65" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-66" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-67" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19857.00 &lt;/td&gt;</span></span>
+<span id="cb13-68" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 187.43 &lt;/td&gt;</span></span>
+<span id="cb13-69" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 170.34 &lt;/td&gt;</span></span>
+<span id="cb13-70" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-71" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-72" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-73" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19858.00 &lt;/td&gt;</span></span>
+<span id="cb13-74" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.72 &lt;/td&gt;</span></span>
+<span id="cb13-75" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.51 &lt;/td&gt;</span></span>
+<span id="cb13-76" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-77" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-78" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-79" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19859.00 &lt;/td&gt;</span></span>
+<span id="cb13-80" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.84 &lt;/td&gt;</span></span>
+<span id="cb13-81" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.18 &lt;/td&gt;</span></span>
+<span id="cb13-82" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-83" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-84" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-85" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19860.00 &lt;/td&gt;</span></span>
+<span id="cb13-86" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.87 &lt;/td&gt;</span></span>
+<span id="cb13-87" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.06 &lt;/td&gt;</span></span>
+<span id="cb13-88" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-89" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-90" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-91" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19863.00 &lt;/td&gt;</span></span>
+<span id="cb13-92" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.04 &lt;/td&gt;</span></span>
+<span id="cb13-93" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.92 &lt;/td&gt;</span></span>
+<span id="cb13-94" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-95" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-96" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-97" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19864.00 &lt;/td&gt;</span></span>
+<span id="cb13-98" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.35 &lt;/td&gt;</span></span>
+<span id="cb13-99" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.85 &lt;/td&gt;</span></span>
+<span id="cb13-100" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-101" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-102" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-103" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19865.00 &lt;/td&gt;</span></span>
+<span id="cb13-104" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.90 &lt;/td&gt;</span></span>
+<span id="cb13-105" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.38 &lt;/td&gt;</span></span>
+<span id="cb13-106" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-107" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-108" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-109" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19866.00 &lt;/td&gt;</span></span>
+<span id="cb13-110" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.88 &lt;/td&gt;</span></span>
+<span id="cb13-111" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.55 &lt;/td&gt;</span></span>
+<span id="cb13-112" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-113" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-114" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-115" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19867.00 &lt;/td&gt;</span></span>
+<span id="cb13-116" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.98 &lt;/td&gt;</span></span>
+<span id="cb13-117" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.99 &lt;/td&gt;</span></span>
+<span id="cb13-118" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-119" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-120" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-121" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19871.00 &lt;/td&gt;</span></span>
+<span id="cb13-122" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.99 &lt;/td&gt;</span></span>
+<span id="cb13-123" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.40 &lt;/td&gt;</span></span>
+<span id="cb13-124" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-125" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-126" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-127" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19872.00 &lt;/td&gt;</span></span>
+<span id="cb13-128" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.29 &lt;/td&gt;</span></span>
+<span id="cb13-129" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.90 &lt;/td&gt;</span></span>
+<span id="cb13-130" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-131" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-132" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-133" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19873.00 &lt;/td&gt;</span></span>
+<span id="cb13-134" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.29 &lt;/td&gt;</span></span>
+<span id="cb13-135" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.11 &lt;/td&gt;</span></span>
+<span id="cb13-136" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-137" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-138" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-139" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19874.00 &lt;/td&gt;</span></span>
+<span id="cb13-140" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.25 &lt;/td&gt;</span></span>
+<span id="cb13-141" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.50 &lt;/td&gt;</span></span>
+<span id="cb13-142" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-143" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-144" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-145" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19877.00 &lt;/td&gt;</span></span>
+<span id="cb13-146" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.03 &lt;/td&gt;</span></span>
+<span id="cb13-147" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.17 &lt;/td&gt;</span></span>
+<span id="cb13-148" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-149" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-150" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-151" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19878.00 &lt;/td&gt;</span></span>
+<span id="cb13-152" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.35 &lt;/td&gt;</span></span>
+<span id="cb13-153" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.79 &lt;/td&gt;</span></span>
+<span id="cb13-154" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-155" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-156" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-157" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19879.00 &lt;/td&gt;</span></span>
+<span id="cb13-158" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 195.87 &lt;/td&gt;</span></span>
+<span id="cb13-159" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.41 &lt;/td&gt;</span></span>
+<span id="cb13-160" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-161" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-162" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-163" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19880.00 &lt;/td&gt;</span></span>
+<span id="cb13-164" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.48 &lt;/td&gt;</span></span>
+<span id="cb13-165" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.73 &lt;/td&gt;</span></span>
+<span id="cb13-166" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-167" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-168" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-169" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19881.00 &lt;/td&gt;</span></span>
+<span id="cb13-170" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 196.89 &lt;/td&gt;</span></span>
+<span id="cb13-171" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.46 &lt;/td&gt;</span></span>
+<span id="cb13-172" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-173" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-174" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-175" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19884.00 &lt;/td&gt;</span></span>
+<span id="cb13-176" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 193.12 &lt;/td&gt;</span></span>
+<span id="cb13-177" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.01 &lt;/td&gt;</span></span>
+<span id="cb13-178" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-179" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-180" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-181" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19885.00 &lt;/td&gt;</span></span>
+<span id="cb13-182" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.15 &lt;/td&gt;</span></span>
+<span id="cb13-183" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.62 &lt;/td&gt;</span></span>
+<span id="cb13-184" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-185" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-186" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-187" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19886.00 &lt;/td&gt;</span></span>
+<span id="cb13-188" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.07 &lt;/td&gt;</span></span>
+<span id="cb13-189" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.79 &lt;/td&gt;</span></span>
+<span id="cb13-190" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-191" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-192" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-193" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19887.00 &lt;/td&gt;</span></span>
+<span id="cb13-194" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.24 &lt;/td&gt;</span></span>
+<span id="cb13-195" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.16 &lt;/td&gt;</span></span>
+<span id="cb13-196" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-197" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-198" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-199" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19888.00 &lt;/td&gt;</span></span>
+<span id="cb13-200" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 212.49 &lt;/td&gt;</span></span>
+<span id="cb13-201" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.79 &lt;/td&gt;</span></span>
+<span id="cb13-202" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-203" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-204" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-205" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19891.00 &lt;/td&gt;</span></span>
+<span id="cb13-206" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.67 &lt;/td&gt;</span></span>
+<span id="cb13-207" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.24 &lt;/td&gt;</span></span>
+<span id="cb13-208" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-209" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-210" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-211" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19892.00 &lt;/td&gt;</span></span>
+<span id="cb13-212" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.29 &lt;/td&gt;</span></span>
+<span id="cb13-213" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.09 &lt;/td&gt;</span></span>
+<span id="cb13-214" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-215" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-216" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-217" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19894.00 &lt;/td&gt;</span></span>
+<span id="cb13-218" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.68 &lt;/td&gt;</span></span>
+<span id="cb13-219" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.30 &lt;/td&gt;</span></span>
+<span id="cb13-220" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-221" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-222" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-223" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19895.00 &lt;/td&gt;</span></span>
+<span id="cb13-224" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.49 &lt;/td&gt;</span></span>
+<span id="cb13-225" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.63 &lt;/td&gt;</span></span>
+<span id="cb13-226" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-227" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-228" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-229" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19898.00 &lt;/td&gt;</span></span>
+<span id="cb13-230" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 208.14 &lt;/td&gt;</span></span>
+<span id="cb13-231" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.22 &lt;/td&gt;</span></span>
+<span id="cb13-232" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-233" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-234" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-235" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19899.00 &lt;/td&gt;</span></span>
+<span id="cb13-236" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.07 &lt;/td&gt;</span></span>
+<span id="cb13-237" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.03 &lt;/td&gt;</span></span>
+<span id="cb13-238" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-239" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-240" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-241" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19900.00 &lt;/td&gt;</span></span>
+<span id="cb13-242" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.25 &lt;/td&gt;</span></span>
+<span id="cb13-243" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.88 &lt;/td&gt;</span></span>
+<span id="cb13-244" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-245" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-246" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-247" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19901.00 &lt;/td&gt;</span></span>
+<span id="cb13-248" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.10 &lt;/td&gt;</span></span>
+<span id="cb13-249" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.41 &lt;/td&gt;</span></span>
+<span id="cb13-250" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-251" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-252" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-253" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19902.00 &lt;/td&gt;</span></span>
+<span id="cb13-254" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 210.62 &lt;/td&gt;</span></span>
+<span id="cb13-255" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.15 &lt;/td&gt;</span></span>
+<span id="cb13-256" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-257" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-258" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-259" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19905.00 &lt;/td&gt;</span></span>
+<span id="cb13-260" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.75 &lt;/td&gt;</span></span>
+<span id="cb13-261" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.99 &lt;/td&gt;</span></span>
+<span id="cb13-262" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-263" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-264" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-265" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19906.00 &lt;/td&gt;</span></span>
+<span id="cb13-266" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 220.27 &lt;/td&gt;</span></span>
+<span id="cb13-267" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.24 &lt;/td&gt;</span></span>
+<span id="cb13-268" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-269" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-270" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-271" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19907.00 &lt;/td&gt;</span></span>
+<span id="cb13-272" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 221.55 &lt;/td&gt;</span></span>
+<span id="cb13-273" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.82 &lt;/td&gt;</span></span>
+<span id="cb13-274" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-275" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-276" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-277" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19909.00 &lt;/td&gt;</span></span>
+<span id="cb13-278" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 226.34 &lt;/td&gt;</span></span>
+<span id="cb13-279" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.60 &lt;/td&gt;</span></span>
+<span id="cb13-280" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-281" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-282" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-283" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19912.00 &lt;/td&gt;</span></span>
+<span id="cb13-284" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.82 &lt;/td&gt;</span></span>
+<span id="cb13-285" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.03 &lt;/td&gt;</span></span>
+<span id="cb13-286" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-287" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-288" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-289" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19913.00 &lt;/td&gt;</span></span>
+<span id="cb13-290" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 228.68 &lt;/td&gt;</span></span>
+<span id="cb13-291" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 188.98 &lt;/td&gt;</span></span>
+<span id="cb13-292" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-293" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-294" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-295" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19914.00 &lt;/td&gt;</span></span>
+<span id="cb13-296" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 232.98 &lt;/td&gt;</span></span>
+<span id="cb13-297" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.18 &lt;/td&gt;</span></span>
+<span id="cb13-298" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-299" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-300" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-301" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19915.00 &lt;/td&gt;</span></span>
+<span id="cb13-302" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.57 &lt;/td&gt;</span></span>
+<span id="cb13-303" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.57 &lt;/td&gt;</span></span>
+<span id="cb13-304" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-305" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">  </span></span>
+<span id="cb13-306" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;tr&gt;</span></span>
+<span id="cb13-307" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td&gt; 19916.00 &lt;/td&gt;</span></span>
+<span id="cb13-308" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 230.54 &lt;/td&gt;</span></span>
+<span id="cb13-309" class="hljs-ln-code"><a href=""></a><span class="st">         &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.07 &lt;/td&gt;</span></span>
+<span id="cb13-310" class="hljs-ln-code"><a href=""></a><span class="st">      &lt;/tr&gt;</span></span>
+<span id="cb13-311" class="hljs-ln-code"><a href=""></a><span class="st">      </span><span class="sc">\n</span><span class="st">   </span></span>
+<span id="cb13-312" class="hljs-ln-code"><a href=""></a><span class="st">   &lt;/tbody&gt;</span></span>
+<span id="cb13-313" class="hljs-ln-code"><a href=""></a><span class="st">&lt;/table&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
 </section>
 <section id="copilot-for-r-shiny-tests-3" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
 <ul>
-<li>Create internal prompt dictionary</li>
-<li>Iteration 1:</li>
+<li>From static to dynamic data</li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb16-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
-<span id="cb16-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb16-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
-<span id="cb16-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb16-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server code of calendar module. </span></span>
-<span id="cb16-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb14-1" class="hljs-ln-code"><a href=""></a><span class="st">"&lt;table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'&gt;</span><span class="sc">\n</span><span class="st">&lt;thead&gt; &lt;tr&gt; &lt;th style='text-align: left;'&gt; date &lt;/th&gt; &lt;th style='text-align: right;'&gt; AAPL &lt;/th&gt; &lt;th style='text-align: right;'&gt; GOOGL &lt;/th&gt;  &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19844.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.30 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 163.86 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19845.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.03 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 166.62 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19846.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.38 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 167.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19849.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 181.71 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.10 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19850.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.40 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 171.25 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19851.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.74 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.38 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19852.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.57 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.96 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19853.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.05 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 168.65 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19856.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.28 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 169.14 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19857.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 187.43 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 170.34 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19858.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.72 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.51 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19859.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.84 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.18 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19860.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.87 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.06 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19863.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.04 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.92 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19864.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.35 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.85 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19865.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.90 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.38 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19866.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 186.88 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.55 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19867.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.98 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.99 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19871.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.99 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.40 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19872.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.90 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19873.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.11 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19874.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 192.25 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 172.50 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19877.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.03 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.17 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19878.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.35 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 173.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19879.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 195.87 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.41 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19880.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 194.48 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.73 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19881.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 196.89 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 174.46 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19884.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 193.12 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.01 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19885.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.15 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.62 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19886.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.07 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19887.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.24 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.16 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19888.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 212.49 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.79 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19891.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.67 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 177.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19892.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.29 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 175.09 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19894.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.68 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 176.30 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19895.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 207.49 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.63 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19898.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 208.14 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 179.22 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19899.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 209.07 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 184.03 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19900.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 213.25 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 183.88 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19901.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 214.10 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.41 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19902.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 210.62 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.15 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19905.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 216.75 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 182.99 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19906.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 220.27 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.24 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19907.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 221.55 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.82 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19909.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 226.34 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 190.60 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19912.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.82 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 189.03 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19913.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 228.68 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 188.98 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19914.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 232.98 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 191.18 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19915.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 227.57 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.57 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">  &lt;tr&gt; &lt;td&gt; 19916.00 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 230.54 &lt;/td&gt; &lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; 185.07 &lt;/td&gt; &lt;/tr&gt;</span><span class="sc">\n</span><span class="st">   &lt;/tbody&gt; &lt;/table&gt;"</span></span>
+<span id="cb14-2" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the expected HTML for the stock_table table. </span></span>
+<span id="cb14-3" class="hljs-ln-code"><a href=""></a><span class="co"># However, the actual data and date of stock prices will change. </span></span>
+<span id="cb14-4" class="hljs-ln-code"><a href=""></a><span class="co"># We need to create a function to transform the HTML into a format that can be compared.</span></span>
+<span id="cb14-5" class="hljs-ln-code"><a href=""></a><span class="co"># The function below will remove the date and close price values from the HTML.</span></span>
+<span id="cb14-6" class="hljs-ln-code"><a href=""></a><span class="co"># This will allow us to compare the HTML without worrying about the actual values.</span></span>
+<span id="cb14-7" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb14-8" class="hljs-ln-code"><a href=""></a>transform_html <span class="ot">&lt;-</span> <span class="cf">function</span>(html) {</span>
+<span id="cb14-9" class="hljs-ln-code"><a href=""></a> <span class="co"># Remove the date values</span></span>
+<span id="cb14-10" class="hljs-ln-code"><a href=""></a> html <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"&lt;td&gt; [0-9]+</span><span class="sc">\\</span><span class="st">.[0-9]+ &lt;/td&gt;"</span>, <span class="st">"&lt;td&gt; DATE &lt;/td&gt;"</span>, html)</span>
+<span id="cb14-11" class="hljs-ln-code"><a href=""></a> <span class="co"># Remove the close price values</span></span>
+<span id="cb14-12" class="hljs-ln-code"><a href=""></a> html <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"&lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; [0-9]+</span><span class="sc">\\</span><span class="st">.[0-9]+ &lt;/td&gt;"</span>, <span class="st">"&lt;td align=</span><span class="sc">\"</span><span class="st">right</span><span class="sc">\"</span><span class="st">&gt; CLOSE &lt;/td&gt;"</span>, html)</span>
+<span id="cb14-13" class="hljs-ln-code"><a href=""></a> <span class="fu">return</span>(html)</span>
+<span id="cb14-14" class="hljs-ln-code"><a href=""></a>}</span>
+<span id="cb14-15" class="hljs-ln-code"><a href=""></a> </span>
+<span id="cb14-16" class="hljs-ln-code"><a href=""></a>  transformed_html <span class="ot">&lt;-</span> <span class="fu">transform_html</span>(stock_table)</span>
+<span id="cb14-17" class="hljs-ln-code"><a href=""></a>  </span>
+<span id="cb14-18" class="hljs-ln-code"><a href=""></a> <span class="er">})</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="copilot-for-r-shiny-tests-4" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
 <ul>
 <li>Create internal prompt dictionary</li>
-<li>Iteration 1: tell Copilot to create server tests</li>
+<li>Iteration 1:</li>
 </ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb17-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
-<span id="cb17-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb17-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
-<span id="cb17-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb17-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server code of the stock price app. </span></span>
-<span id="cb17-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span>
-<span id="cb17-7" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb17-8" class="hljs-ln-code"><a href=""></a><span class="co"># Load the Shiny library</span></span>
-<span id="cb17-9" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(shiny)</span>
-<span id="cb17-10" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb17-11" class="hljs-ln-code"><a href=""></a><span class="co"># Run the Shiny app</span></span>
-<span id="cb17-12" class="hljs-ln-code"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb15-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
+<span id="cb15-2" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb15-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
+<span id="cb15-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb15-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server code of calendar module. </span></span>
+<span id="cb15-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="copilot-for-r-shiny-tests-5" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
 <ul>
 <li>Create internal prompt dictionary</li>
-<li>Iteration 2: Refer to resources on the internet</li>
+<li>Iteration 1: tell Copilot to create server tests</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb18-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
-<span id="cb18-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb18-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
-<span id="cb18-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb18-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server of the stock price app. </span></span>
-<span id="cb18-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span>
-<span id="cb18-7" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the documentation here: https://shiny.posit.co/r/articles/improve/server-function-testing/</span></span>
-<span id="cb18-8" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the explanation here: https://mastering-shiny.org/scaling-testing.html#modules, for the correct structure of serve tests. </span></span>
-<span id="cb18-9" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb18-10" class="hljs-ln-code"><a href=""></a><span class="co"># Define the test</span></span>
-<span id="cb18-11" class="hljs-ln-code"><a href=""></a><span class="fu">test_that</span>(<span class="st">"server function works correctly"</span>, {</span>
-<span id="cb18-12" class="hljs-ln-code"><a href=""></a>  <span class="co"># Create a mock input object</span></span>
-<span id="cb18-13" class="hljs-ln-code"><a href=""></a>  input <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">stock =</span> <span class="st">"AAPL"</span>)</span>
-<span id="cb18-14" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb18-15" class="hljs-ln-code"><a href=""></a>  <span class="co"># Create a mock output object</span></span>
-<span id="cb18-16" class="hljs-ln-code"><a href=""></a>  output <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">stock_table =</span> <span class="cn">NULL</span>, <span class="at">stock_plot =</span> <span class="cn">NULL</span>)</span>
-<span id="cb18-17" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb18-18" class="hljs-ln-code"><a href=""></a>  <span class="co"># Run the server function</span></span>
-<span id="cb18-19" class="hljs-ln-code"><a href=""></a>  <span class="fu">server</span>(input, output)</span>
-<span id="cb18-20" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb18-21" class="hljs-ln-code"><a href=""></a>  <span class="co"># Check that the stock data is a data frame</span></span>
-<span id="cb18-22" class="hljs-ln-code"><a href=""></a>  <span class="fu">expect_is</span>(output<span class="sc">$</span>stock_data, <span class="st">"data.frame"</span>)</span>
-<span id="cb18-23" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb18-24" class="hljs-ln-code"><a href=""></a>  <span class="co"># ...</span></span>
-<span id="cb18-25" class="hljs-ln-code"><a href=""></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb16-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
+<span id="cb16-2" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb16-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
+<span id="cb16-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb16-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server code of the stock price app. </span></span>
+<span id="cb16-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span>
+<span id="cb16-7" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb16-8" class="hljs-ln-code"><a href=""></a><span class="co"># Load the Shiny library</span></span>
+<span id="cb16-9" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(shiny)</span>
+<span id="cb16-10" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb16-11" class="hljs-ln-code"><a href=""></a><span class="co"># Run the Shiny app</span></span>
+<span id="cb16-12" class="hljs-ln-code"><a href=""></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="copilot-for-r-shiny-tests-6" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
 <ul>
 <li>Create internal prompt dictionary</li>
+<li>Iteration 2: Refer to resources on the internet</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb17-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
+<span id="cb17-2" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb17-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
+<span id="cb17-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb17-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server of the stock price app. </span></span>
+<span id="cb17-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span>
+<span id="cb17-7" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the documentation here: https://shiny.posit.co/r/articles/improve/server-function-testing/</span></span>
+<span id="cb17-8" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the explanation here: https://mastering-shiny.org/scaling-testing.html#modules, for the correct structure of serve tests. </span></span>
+<span id="cb17-9" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb17-10" class="hljs-ln-code"><a href=""></a><span class="co"># Define the test</span></span>
+<span id="cb17-11" class="hljs-ln-code"><a href=""></a><span class="fu">test_that</span>(<span class="st">"server function works correctly"</span>, {</span>
+<span id="cb17-12" class="hljs-ln-code"><a href=""></a>  <span class="co"># Create a mock input object</span></span>
+<span id="cb17-13" class="hljs-ln-code"><a href=""></a>  input <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">stock =</span> <span class="st">"AAPL"</span>)</span>
+<span id="cb17-14" class="hljs-ln-code"><a href=""></a>  </span>
+<span id="cb17-15" class="hljs-ln-code"><a href=""></a>  <span class="co"># Create a mock output object</span></span>
+<span id="cb17-16" class="hljs-ln-code"><a href=""></a>  output <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">stock_table =</span> <span class="cn">NULL</span>, <span class="at">stock_plot =</span> <span class="cn">NULL</span>)</span>
+<span id="cb17-17" class="hljs-ln-code"><a href=""></a>  </span>
+<span id="cb17-18" class="hljs-ln-code"><a href=""></a>  <span class="co"># Run the server function</span></span>
+<span id="cb17-19" class="hljs-ln-code"><a href=""></a>  <span class="fu">server</span>(input, output)</span>
+<span id="cb17-20" class="hljs-ln-code"><a href=""></a>  </span>
+<span id="cb17-21" class="hljs-ln-code"><a href=""></a>  <span class="co"># Check that the stock data is a data frame</span></span>
+<span id="cb17-22" class="hljs-ln-code"><a href=""></a>  <span class="fu">expect_is</span>(output<span class="sc">$</span>stock_data, <span class="st">"data.frame"</span>)</span>
+<span id="cb17-23" class="hljs-ln-code"><a href=""></a>  </span>
+<span id="cb17-24" class="hljs-ln-code"><a href=""></a>  <span class="co"># ...</span></span>
+<span id="cb17-25" class="hljs-ln-code"><a href=""></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="copilot-for-r-shiny-tests-7" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Copilot for R Shiny tests</h2>
+<ul>
+<li>Create internal prompt dictionary</li>
 <li>Iteration 3: Provide examples</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb19-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
-<span id="cb19-2" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb19-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
-<span id="cb19-4" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb19-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server code of calendar module. </span></span>
-<span id="cb19-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span>
-<span id="cb19-7" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the documentation here: https://shiny.posit.co/r/articles/improve/server-function-testing/</span></span>
-<span id="cb19-8" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the explanation here: https://mastering-shiny.org/scaling-testing.html#modules, for the correct structure of serve tests. </span></span>
-<span id="cb19-9" class="hljs-ln-code"><a href=""></a><span class="co">#</span></span>
-<span id="cb19-10" class="hljs-ln-code"><a href=""></a><span class="co"># Example: </span></span>
-<span id="cb19-11" class="hljs-ln-code"><a href=""></a><span class="co"># summaryUI &lt;- function(id) {</span></span>
-<span id="cb19-12" class="hljs-ln-code"><a href=""></a><span class="co">#   tagList(</span></span>
-<span id="cb19-13" class="hljs-ln-code"><a href=""></a><span class="co">#     outputText(ns(id, "min")),</span></span>
-<span id="cb19-14" class="hljs-ln-code"><a href=""></a><span class="co">#     outputText(ns(id, "mean")),</span></span>
-<span id="cb19-15" class="hljs-ln-code"><a href=""></a><span class="co">#     outputText(ns(id, "max")),</span></span>
-<span id="cb19-16" class="hljs-ln-code"><a href=""></a><span class="co">#   )</span></span>
-<span id="cb19-17" class="hljs-ln-code"><a href=""></a><span class="co"># }</span></span>
-<span id="cb19-18" class="hljs-ln-code"><a href=""></a><span class="co"># summaryServer &lt;- function(id, var) {</span></span>
-<span id="cb19-19" class="hljs-ln-code"><a href=""></a><span class="co">#   stopifnot(is.reactive(var))</span></span>
-<span id="cb19-20" class="hljs-ln-code"><a href=""></a><span class="co">#   </span></span>
-<span id="cb19-21" class="hljs-ln-code"><a href=""></a><span class="co">#   moduleServer(id, function(input, output, session) {</span></span>
-<span id="cb19-22" class="hljs-ln-code"><a href=""></a><span class="co">#     range_val &lt;- reactive(range(var(), na.rm = TRUE))</span></span>
-<span id="cb19-23" class="hljs-ln-code"><a href=""></a><span class="co">#     output$min &lt;- renderText(range_val()[[1]])</span></span>
-<span id="cb19-24" class="hljs-ln-code"><a href=""></a><span class="co">#     output$max &lt;- renderText(range_val()[[2]])</span></span>
-<span id="cb19-25" class="hljs-ln-code"><a href=""></a><span class="co">#     output$mean &lt;- renderText(mean(var()))</span></span>
-<span id="cb19-26" class="hljs-ln-code"><a href=""></a><span class="co">#   })</span></span>
-<span id="cb19-27" class="hljs-ln-code"><a href=""></a><span class="co"># }</span></span>
-<span id="cb19-28" class="hljs-ln-code"><a href=""></a><span class="co"># Above is summaryUI and summarServer. Below is an simple example of server test:</span></span>
-<span id="cb19-29" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb19-30" class="hljs-ln-code"><a href=""></a><span class="co"># test_that("output updates when reactive input changes", {</span></span>
-<span id="cb19-31" class="hljs-ln-code"><a href=""></a><span class="co">#   x &lt;- reactiveVal()</span></span>
-<span id="cb19-32" class="hljs-ln-code"><a href=""></a><span class="co">#   testServer(summaryServer, args = list(var = x), {</span></span>
-<span id="cb19-33" class="hljs-ln-code"><a href=""></a><span class="co">#     x(1:10)</span></span>
-<span id="cb19-34" class="hljs-ln-code"><a href=""></a><span class="co">#     session$flushReact()</span></span>
-<span id="cb19-35" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(range_val(), c(1, 10))</span></span>
-<span id="cb19-36" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(output$mean, "5.5")</span></span>
-<span id="cb19-37" class="hljs-ln-code"><a href=""></a><span class="co">#     </span></span>
-<span id="cb19-38" class="hljs-ln-code"><a href=""></a><span class="co">#     x(10:20)</span></span>
-<span id="cb19-39" class="hljs-ln-code"><a href=""></a><span class="co">#     session$flushReact()</span></span>
-<span id="cb19-40" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(range_val(), c(10, 20))</span></span>
-<span id="cb19-41" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(output$min, "10")</span></span>
-<span id="cb19-42" class="hljs-ln-code"><a href=""></a><span class="co">#   }) </span></span>
-<span id="cb19-43" class="hljs-ln-code"><a href=""></a><span class="co"># })</span></span>
-<span id="cb19-44" class="hljs-ln-code"><a href=""></a></span>
-<span id="cb19-45" class="hljs-ln-code"><a href=""></a><span class="fu">test_that</span>(<span class="st">"stock app server function retrieves stock data"</span>, {</span>
-<span id="cb19-46" class="hljs-ln-code"><a href=""></a>  <span class="co"># Create a mock input object</span></span>
-<span id="cb19-47" class="hljs-ln-code"><a href=""></a>  input <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">stock =</span> <span class="fu">c</span>(<span class="st">"AAPL"</span>, <span class="st">"GOOGL"</span>))</span>
-<span id="cb19-48" class="hljs-ln-code"><a href=""></a>  </span>
-<span id="cb19-49" class="hljs-ln-code"><a href=""></a>  <span class="co"># Test the get_stock_data function</span></span>
-<span id="cb19-50" class="hljs-ln-code"><a href=""></a>  <span class="fu">testServer</span>(server, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">input =</span> input), {</span>
-<span id="cb19-51" class="hljs-ln-code"><a href=""></a>    ...</span>
-<span id="cb19-52" class="hljs-ln-code"><a href=""></a>  })</span>
-<span id="cb19-53" class="hljs-ln-code"><a href=""></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb18-1" class="hljs-ln-code"><a href=""></a>ui <span class="ot">&lt;-</span> ...</span>
+<span id="cb18-2" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-3" class="hljs-ln-code"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(...){...}</span>
+<span id="cb18-4" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-5" class="hljs-ln-code"><a href=""></a><span class="co"># Above is the UI and server code of calendar module. </span></span>
+<span id="cb18-6" class="hljs-ln-code"><a href=""></a><span class="co"># Create code that does some basic server test.</span></span>
+<span id="cb18-7" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the documentation here: https://shiny.posit.co/r/articles/improve/server-function-testing/</span></span>
+<span id="cb18-8" class="hljs-ln-code"><a href=""></a><span class="co"># Refer to the explanation here: https://mastering-shiny.org/scaling-testing.html#modules, for the correct structure of serve tests. </span></span>
+<span id="cb18-9" class="hljs-ln-code"><a href=""></a><span class="co">#</span></span>
+<span id="cb18-10" class="hljs-ln-code"><a href=""></a><span class="co"># Example: </span></span>
+<span id="cb18-11" class="hljs-ln-code"><a href=""></a><span class="co"># summaryUI &lt;- function(id) {</span></span>
+<span id="cb18-12" class="hljs-ln-code"><a href=""></a><span class="co">#   tagList(</span></span>
+<span id="cb18-13" class="hljs-ln-code"><a href=""></a><span class="co">#     outputText(ns(id, "min")),</span></span>
+<span id="cb18-14" class="hljs-ln-code"><a href=""></a><span class="co">#     outputText(ns(id, "mean")),</span></span>
+<span id="cb18-15" class="hljs-ln-code"><a href=""></a><span class="co">#     outputText(ns(id, "max")),</span></span>
+<span id="cb18-16" class="hljs-ln-code"><a href=""></a><span class="co">#   )</span></span>
+<span id="cb18-17" class="hljs-ln-code"><a href=""></a><span class="co"># }</span></span>
+<span id="cb18-18" class="hljs-ln-code"><a href=""></a><span class="co"># summaryServer &lt;- function(id, var) {</span></span>
+<span id="cb18-19" class="hljs-ln-code"><a href=""></a><span class="co">#   stopifnot(is.reactive(var))</span></span>
+<span id="cb18-20" class="hljs-ln-code"><a href=""></a><span class="co">#   </span></span>
+<span id="cb18-21" class="hljs-ln-code"><a href=""></a><span class="co">#   moduleServer(id, function(input, output, session) {</span></span>
+<span id="cb18-22" class="hljs-ln-code"><a href=""></a><span class="co">#     range_val &lt;- reactive(range(var(), na.rm = TRUE))</span></span>
+<span id="cb18-23" class="hljs-ln-code"><a href=""></a><span class="co">#     output$min &lt;- renderText(range_val()[[1]])</span></span>
+<span id="cb18-24" class="hljs-ln-code"><a href=""></a><span class="co">#     output$max &lt;- renderText(range_val()[[2]])</span></span>
+<span id="cb18-25" class="hljs-ln-code"><a href=""></a><span class="co">#     output$mean &lt;- renderText(mean(var()))</span></span>
+<span id="cb18-26" class="hljs-ln-code"><a href=""></a><span class="co">#   })</span></span>
+<span id="cb18-27" class="hljs-ln-code"><a href=""></a><span class="co"># }</span></span>
+<span id="cb18-28" class="hljs-ln-code"><a href=""></a><span class="co"># Above is summaryUI and summarServer. Below is an simple example of server test:</span></span>
+<span id="cb18-29" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-30" class="hljs-ln-code"><a href=""></a><span class="co"># test_that("output updates when reactive input changes", {</span></span>
+<span id="cb18-31" class="hljs-ln-code"><a href=""></a><span class="co">#   x &lt;- reactiveVal()</span></span>
+<span id="cb18-32" class="hljs-ln-code"><a href=""></a><span class="co">#   testServer(summaryServer, args = list(var = x), {</span></span>
+<span id="cb18-33" class="hljs-ln-code"><a href=""></a><span class="co">#     x(1:10)</span></span>
+<span id="cb18-34" class="hljs-ln-code"><a href=""></a><span class="co">#     session$flushReact()</span></span>
+<span id="cb18-35" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(range_val(), c(1, 10))</span></span>
+<span id="cb18-36" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(output$mean, "5.5")</span></span>
+<span id="cb18-37" class="hljs-ln-code"><a href=""></a><span class="co">#     </span></span>
+<span id="cb18-38" class="hljs-ln-code"><a href=""></a><span class="co">#     x(10:20)</span></span>
+<span id="cb18-39" class="hljs-ln-code"><a href=""></a><span class="co">#     session$flushReact()</span></span>
+<span id="cb18-40" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(range_val(), c(10, 20))</span></span>
+<span id="cb18-41" class="hljs-ln-code"><a href=""></a><span class="co">#     expect_equal(output$min, "10")</span></span>
+<span id="cb18-42" class="hljs-ln-code"><a href=""></a><span class="co">#   }) </span></span>
+<span id="cb18-43" class="hljs-ln-code"><a href=""></a><span class="co"># })</span></span>
+<span id="cb18-44" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-45" class="hljs-ln-code"><a href=""></a><span class="co"># Create server tests for the stock app server</span></span>
+<span id="cb18-46" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb18-47" class="hljs-ln-code"><a href=""></a><span class="fu">test_that</span>(<span class="st">"stock data is retrieved correctly"</span>, {</span>
+<span id="cb18-48" class="hljs-ln-code"><a href=""></a>  <span class="fu">testServer</span>(server, {</span>
+<span id="cb18-49" class="hljs-ln-code"><a href=""></a>    <span class="fu">expect_is</span>(<span class="fu">stock_data</span>(), <span class="st">"data.frame"</span>)</span>
+<span id="cb18-50" class="hljs-ln-code"><a href=""></a>    <span class="fu">expect_equal</span>(<span class="fu">nrow</span>(<span class="fu">stock_data</span>()), <span class="dv">10</span>)</span>
+<span id="cb18-51" class="hljs-ln-code"><a href=""></a>    <span class="fu">expect_equal</span>(<span class="fu">ncol</span>(<span class="fu">stock_data</span>()), <span class="dv">3</span>)</span>
+<span id="cb18-52" class="hljs-ln-code"><a href=""></a>    <span class="fu">expect_equal</span>(<span class="fu">colnames</span>(<span class="fu">stock_data</span>()), <span class="fu">c</span>(<span class="st">"date"</span>, <span class="st">"close"</span>, <span class="st">"symbol"</span>))</span>
+<span id="cb18-53" class="hljs-ln-code"><a href=""></a>  })</span>
+<span id="cb18-54" class="hljs-ln-code"><a href=""></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="knowledge-as-prompt-dictionary" class="slide level2">
 <h2>Knowledge as prompt dictionary</h2>

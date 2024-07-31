@@ -89,30 +89,6 @@ Type of prompts
 :::
 :::
 
-::: footer
-["Single, Short, Specific - Prompting GitHub Copilot for Visual Studio"](https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226)
-:::
-
-## Writing prompts {auto-animate="true"}
-
-``` r
-# Create a beautiful stock price tracking application using a 
-# table and a chart. The UI should allow users to select one or 
-# multiple stocks with a dropdown select input. It should show 
-# a table with information about all selected stocks, and a line 
-# chart showing price changes over time.
-```
-
-## Writing prompts {auto-animate="true"}
-
-``` r
-# Create a beautiful stock price tracking application using a 
-# table and a chart. The UI should allow users to select one or 
-# multiple stocks with a dropdown select input. It should show 
-# a table with information about all selected stocks, and a line 
-# chart showing price changes over time.
-```
-<p>&nbsp;</p>
 
 ``` {.r code-line-numbers="2|3|4"}
 
@@ -121,6 +97,10 @@ Type of prompts
 # Change the UI above. Put stock selection menu in the sidebar.
 # ...
 ```
+
+::: footer
+["Single, Short, Specific - Prompting GitHub Copilot for Visual Studio"](https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226)
+:::
 
 ## Writing prompts {auto-animate="true"}
 
@@ -374,6 +354,338 @@ create_stock_table <- function(data) {
 
 ## Copilot for R Shiny tests {auto-animate="true"}
 
+::: columns
+::: {.column width="30%"}
+
+![](images/html_output.jpg)
+
+:::
+::: {.column width="20%"}
+:::
+::: {.column width="50%"}
+-   From static to dynamic data
+
+``` r
+"<table  class = 'table shiny-table table- spacing-s' style = 'width:auto;'>
+   \n
+   <thead>
+      <tr>
+         <th style='text-align: left;'> date </th>
+         <th style='text-align: right;'> AAPL </th>
+         <th style='text-align: right;'> GOOGL </th>
+      </tr>
+   </thead>
+   <tbody>
+      \n  
+      <tr>
+         <td> 19844.00 </td>
+         <td align=\"right\"> 169.30 </td>
+         <td align=\"right\"> 163.86 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19845.00 </td>
+         <td align=\"right\"> 173.03 </td>
+         <td align=\"right\"> 166.62 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19846.00 </td>
+         <td align=\"right\"> 183.38 </td>
+         <td align=\"right\"> 167.24 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19849.00 </td>
+         <td align=\"right\"> 181.71 </td>
+         <td align=\"right\"> 168.10 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19850.00 </td>
+         <td align=\"right\"> 182.40 </td>
+         <td align=\"right\"> 171.25 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19851.00 </td>
+         <td align=\"right\"> 182.74 </td>
+         <td align=\"right\"> 169.38 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19852.00 </td>
+         <td align=\"right\"> 184.57 </td>
+         <td align=\"right\"> 169.96 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19853.00 </td>
+         <td align=\"right\"> 183.05 </td>
+         <td align=\"right\"> 168.65 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19856.00 </td>
+         <td align=\"right\"> 186.28 </td>
+         <td align=\"right\"> 169.14 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19857.00 </td>
+         <td align=\"right\"> 187.43 </td>
+         <td align=\"right\"> 170.34 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19858.00 </td>
+         <td align=\"right\"> 189.72 </td>
+         <td align=\"right\"> 172.51 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19859.00 </td>
+         <td align=\"right\"> 189.84 </td>
+         <td align=\"right\"> 174.18 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19860.00 </td>
+         <td align=\"right\"> 189.87 </td>
+         <td align=\"right\"> 176.06 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19863.00 </td>
+         <td align=\"right\"> 191.04 </td>
+         <td align=\"right\"> 176.92 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19864.00 </td>
+         <td align=\"right\"> 192.35 </td>
+         <td align=\"right\"> 177.85 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19865.00 </td>
+         <td align=\"right\"> 190.90 </td>
+         <td align=\"right\"> 176.38 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19866.00 </td>
+         <td align=\"right\"> 186.88 </td>
+         <td align=\"right\"> 173.55 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19867.00 </td>
+         <td align=\"right\"> 189.98 </td>
+         <td align=\"right\"> 174.99 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19871.00 </td>
+         <td align=\"right\"> 189.99 </td>
+         <td align=\"right\"> 176.40 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19872.00 </td>
+         <td align=\"right\"> 190.29 </td>
+         <td align=\"right\"> 175.90 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19873.00 </td>
+         <td align=\"right\"> 191.29 </td>
+         <td align=\"right\"> 172.11 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19874.00 </td>
+         <td align=\"right\"> 192.25 </td>
+         <td align=\"right\"> 172.50 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19877.00 </td>
+         <td align=\"right\"> 194.03 </td>
+         <td align=\"right\"> 173.17 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19878.00 </td>
+         <td align=\"right\"> 194.35 </td>
+         <td align=\"right\"> 173.79 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19879.00 </td>
+         <td align=\"right\"> 195.87 </td>
+         <td align=\"right\"> 175.41 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19880.00 </td>
+         <td align=\"right\"> 194.48 </td>
+         <td align=\"right\"> 176.73 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19881.00 </td>
+         <td align=\"right\"> 196.89 </td>
+         <td align=\"right\"> 174.46 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19884.00 </td>
+         <td align=\"right\"> 193.12 </td>
+         <td align=\"right\"> 175.01 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19885.00 </td>
+         <td align=\"right\"> 207.15 </td>
+         <td align=\"right\"> 176.62 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19886.00 </td>
+         <td align=\"right\"> 213.07 </td>
+         <td align=\"right\"> 177.79 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19887.00 </td>
+         <td align=\"right\"> 214.24 </td>
+         <td align=\"right\"> 175.16 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19888.00 </td>
+         <td align=\"right\"> 212.49 </td>
+         <td align=\"right\"> 176.79 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19891.00 </td>
+         <td align=\"right\"> 216.67 </td>
+         <td align=\"right\"> 177.24 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19892.00 </td>
+         <td align=\"right\"> 214.29 </td>
+         <td align=\"right\"> 175.09 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19894.00 </td>
+         <td align=\"right\"> 209.68 </td>
+         <td align=\"right\"> 176.30 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19895.00 </td>
+         <td align=\"right\"> 207.49 </td>
+         <td align=\"right\"> 179.63 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19898.00 </td>
+         <td align=\"right\"> 208.14 </td>
+         <td align=\"right\"> 179.22 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19899.00 </td>
+         <td align=\"right\"> 209.07 </td>
+         <td align=\"right\"> 184.03 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19900.00 </td>
+         <td align=\"right\"> 213.25 </td>
+         <td align=\"right\"> 183.88 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19901.00 </td>
+         <td align=\"right\"> 214.10 </td>
+         <td align=\"right\"> 185.41 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19902.00 </td>
+         <td align=\"right\"> 210.62 </td>
+         <td align=\"right\"> 182.15 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19905.00 </td>
+         <td align=\"right\"> 216.75 </td>
+         <td align=\"right\"> 182.99 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19906.00 </td>
+         <td align=\"right\"> 220.27 </td>
+         <td align=\"right\"> 185.24 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19907.00 </td>
+         <td align=\"right\"> 221.55 </td>
+         <td align=\"right\"> 185.82 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19909.00 </td>
+         <td align=\"right\"> 226.34 </td>
+         <td align=\"right\"> 190.60 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19912.00 </td>
+         <td align=\"right\"> 227.82 </td>
+         <td align=\"right\"> 189.03 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19913.00 </td>
+         <td align=\"right\"> 228.68 </td>
+         <td align=\"right\"> 188.98 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19914.00 </td>
+         <td align=\"right\"> 232.98 </td>
+         <td align=\"right\"> 191.18 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19915.00 </td>
+         <td align=\"right\"> 227.57 </td>
+         <td align=\"right\"> 185.57 </td>
+      </tr>
+      \n  
+      <tr>
+         <td> 19916.00 </td>
+         <td align=\"right\"> 230.54 </td>
+         <td align=\"right\"> 185.07 </td>
+      </tr>
+      \n   
+   </tbody>
+</table>"
+```
+
+:::
+:::
+
+## Copilot for R Shiny tests {auto-animate="true"}
+
 -   From static to dynamic data
 
 ``` r
@@ -396,7 +708,6 @@ transform_html <- function(html) {
   
  })
 ```
-
 ## Copilot for R Shiny tests {auto-animate="true"}
 
 -  Create internal prompt dictionary
@@ -516,13 +827,14 @@ server <- function(...){...}
 #   }) 
 # })
 
-test_that("stock app server function retrieves stock data", {
-  # Create a mock input object
-  input <- list(stock = c("AAPL", "GOOGL"))
-  
-  # Test the get_stock_data function
-  testServer(server, args = list(input = input), {
-    ...
+# Create server tests for the stock app server
+
+test_that("stock data is retrieved correctly", {
+  testServer(server, {
+    expect_is(stock_data(), "data.frame")
+    expect_equal(nrow(stock_data()), 10)
+    expect_equal(ncol(stock_data()), 3)
+    expect_equal(colnames(stock_data()), c("date", "close", "symbol"))
   })
 })
 ```
