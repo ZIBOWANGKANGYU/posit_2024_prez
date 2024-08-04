@@ -48,11 +48,26 @@ If you are a data professional using R, try **GitHub Copilot with Shiny first!**
 
 ## Interacting with Copilot
 
+::: columns
+::: {.column width="40%"}
+Developed by 
+
+-   OpenAI
+
+-   GitHub
+
+-   Microsoft
+:::
+::: {.column width="20%"}
+:::
+::: {.column width="40%"}
 Supported platforms
 
 -   RStudio IDE
 
 -   Positron? use `chattr` package
+:::
+:::
 
 ## The basic workflow {auto-animate="true"}
 
@@ -122,12 +137,13 @@ Type of prompts
 
 -   If not sure, ask Copilot
 
-``` {.r code-line-numbers="5"}
+``` {.r code-line-numbers="5|6-7"}
 # Please don't provide code but give answer in English. 
 # What packages in R provide functionality for selection inputs? 
 # The user need to select one or a few stock tickers. 
 
-# Answer: The shiny package provides the functionality for selection inputs.
+# Answer: 
+# The shiny package provides the functionality for selection inputs.
 # The selectInput function creates a selection input in Shiny.
 
 ```
@@ -288,7 +304,26 @@ https://github.com/mlverse/chattr/blob/c296963390de1d8727cac72dda301c910c81a624/
 
 ![](images/fundamental_workflow_3.svg){width="41"}
 
-## Iteration
+## Iteration {auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+Iteration
+
+-   Documentation first
+
+-   From static to dynamic data
+
+-   Create internal prompt dictionary
+
+:::
+::: {.column width="20%"}
+:::
+::: {.column width="40%"}
+:::
+:::
+
+## Iteration {auto-animate="true"}
 
 ::: columns
 ::: {.column width="40%"}
@@ -355,12 +390,12 @@ create_stock_table <- function(data) {
 ## Copilot for R Shiny tests {auto-animate="true"}
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="45%"}
 
 ![](images/html_output.jpg)
 
 :::
-::: {.column width="20%"}
+::: {.column width="5%"}
 :::
 ::: {.column width="50%"}
 -   From static to dynamic data
@@ -728,7 +763,7 @@ server <- function(...){...}
 -  Create internal prompt dictionary
   *  Iteration 1:  tell Copilot to create server tests
 
-``` {.r}
+``` {.r code-line-numbers="8-12"}
 ui <- ...
 
 server <- function(...){...}
@@ -750,6 +785,22 @@ shinyApp(ui = ui, server = server)
   *  Iteration 2: Refer to resources on the internet
 
 ``` {.r}
+ui <- ...
+
+server <- function(...){...}
+
+# Above is the UI and server of the stock price app. 
+# Create code that does some basic server test.
+# Refer to the documentation here: https://shiny.posit.co/r/articles/improve/server-function-testing/
+# Refer to the explanation here: https://mastering-shiny.org/scaling-testing.html#modules, for the correct structure of serve tests. 
+```
+
+## Copilot for R Shiny tests {auto-animate="true"}
+
+-  Create internal prompt dictionary
+  *  Iteration 2: Refer to resources on the internet
+
+``` {.r code-line-numbers="10-25"}
 ui <- ...
 
 server <- function(...){...}
@@ -827,6 +878,58 @@ server <- function(...){...}
 #   }) 
 # })
 
+```
+
+## Copilot for R Shiny tests {auto-animate="true"}
+
+-  Create internal prompt dictionary
+  *  Iteration 3: Provide examples
+  
+``` {.r code-line-numbers="45-54"}
+ui <- ...
+
+server <- function(...){...}
+
+# Above is the UI and server code of calendar module. 
+# Create code that does some basic server test.
+# Refer to the documentation here: https://shiny.posit.co/r/articles/improve/server-function-testing/
+# Refer to the explanation here: https://mastering-shiny.org/scaling-testing.html#modules, for the correct structure of serve tests. 
+#
+# Example: 
+# summaryUI <- function(id) {
+#   tagList(
+#     outputText(ns(id, "min")),
+#     outputText(ns(id, "mean")),
+#     outputText(ns(id, "max")),
+#   )
+# }
+# summaryServer <- function(id, var) {
+#   stopifnot(is.reactive(var))
+#   
+#   moduleServer(id, function(input, output, session) {
+#     range_val <- reactive(range(var(), na.rm = TRUE))
+#     output$min <- renderText(range_val()[[1]])
+#     output$max <- renderText(range_val()[[2]])
+#     output$mean <- renderText(mean(var()))
+#   })
+# }
+# Above is summaryUI and summarServer. Below is an simple example of server test:
+
+# test_that("output updates when reactive input changes", {
+#   x <- reactiveVal()
+#   testServer(summaryServer, args = list(var = x), {
+#     x(1:10)
+#     session$flushReact()
+#     expect_equal(range_val(), c(1, 10))
+#     expect_equal(output$mean, "5.5")
+#     
+#     x(10:20)
+#     session$flushReact()
+#     expect_equal(range_val(), c(10, 20))
+#     expect_equal(output$min, "10")
+#   }) 
+# })
+
 # Create server tests for the stock app server
 
 test_that("stock data is retrieved correctly", {
@@ -845,3 +948,6 @@ test_that("stock data is retrieved correctly", {
 -   Code and documentation standards
 -   Deployment process and environment
 
+## Start your Copilot adventures with R Shiny
+
+![](images/fundamental_workflow.svg){width="41"}
