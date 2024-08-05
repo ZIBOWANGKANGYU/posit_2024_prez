@@ -94,6 +94,30 @@ Effective prompts
 :::
 
 ::: {.column width="40%"}
+:::
+:::
+
+::: footer
+["Single, Short, Specific - Prompting GitHub Copilot for Visual Studio"](https://techcommunity.microsoft.com/t5/microsoft-developer-community/single-short-specific-prompting-github-copilot-for-visual-studio/ba-p/4117226)
+:::
+
+## Writing prompts {auto-animate="true"}
+
+::: columns
+::: {.column width="40%"}
+Effective prompts
+
+-   Single
+
+-   Short
+
+-   Specific
+:::
+
+::: {.column width="20%"}
+:::
+
+::: {.column width="40%"}
 Type of prompts
 
 -   Command
