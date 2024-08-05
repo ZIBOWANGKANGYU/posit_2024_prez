@@ -1,5 +1,6 @@
 ---
 title: "Use GitHub Copilot for R Shiny Development"
+author: "Mark Wang, R Programmer at Pinnacle"
 format:
   revealjs: 
     code-line-numbers: true
@@ -409,6 +410,37 @@ create_stock_table <- function(data) {
 # Now, write unit tests for the function create_stock_table. 
 # Use the testthat package and write the tests. 
 # Refererence here: https://testthat.r-lib.org/
+```
+
+## Copilot for R Shiny tests {auto-animate="true"}
+
+-   Documentation first
+
+``` {.r code-line-numbers="18-24"}
+#' Create a stock table
+#' 
+#' This function creates a stock table from a data frame.
+#' 
+#' @param data A data frame with stock data
+#' @return A data frame with stock data in wide format
+#' 
+create_stock_table <- function(data) {
+  stock_data_wide <- data %>% spread(symbol, close) %>%
+    mutate(date = as.character(date))
+  stock_data_wide
+}
+
+# Now, write unit tests for the function create_stock_table. 
+# Use the testthat package and write the tests. 
+# Refererence here: https://testthat.r-lib.org/
+
+# Test 1: Test if the function returns a data frame
+test_that("Test if the function returns a data frame", {
+  data <- data.frame(date = c("2020-01-01", "2020-01-02", "2020-01-03"),
+                     symbol = c("AAPL", "AAPL", "AAPL"),
+                     close = c(100, 101, 102))
+  expect_is(create_stock_table(data), "data.frame")
+})
 ```
 
 ## Copilot for R Shiny tests {auto-animate="true"}
@@ -975,3 +1007,11 @@ test_that("stock data is retrieved correctly", {
 ## Start your Copilot adventures with R Shiny
 
 ![](images/fundamental_workflow.svg){width="41"}
+
+## Thank you
+
+Contact me
+
+- kangyumarkwang@gmail.com
+
+- https://www.linkedin.com/in/kmarkwang/
