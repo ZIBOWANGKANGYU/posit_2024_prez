@@ -248,7 +248,6 @@ https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineeri
 ## Refer to knowledge on the internet {auto-animate="true"}
 
 ``` r
-
   c(
     "Use the 'Tidy Modeling with R' (https://www.tmwr.org/) book as main reference",
     "Use the 'R for Data Science' (https://r4ds.had.co.nz/) book as main reference",
