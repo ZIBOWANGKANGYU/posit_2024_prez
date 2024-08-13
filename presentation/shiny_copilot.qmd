@@ -958,6 +958,10 @@ server <- function(...){...}
 # })
 ```
 
+::: footer
+https://mastering-shiny.org/scaling-testing.html#testing-reactivity
+:::
+
 ## Copilot for R Shiny tests {auto-animate="true"}
 
 -   Create internal prompt dictionary
@@ -1019,6 +1023,10 @@ test_that("stock data is retrieved correctly", {
   })
 })
 ```
+
+::: footer
+https://mastering-shiny.org/scaling-testing.html#testing-reactivity
+:::
 
 ## Knowledge as prompt dictionary
 
